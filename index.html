@@ -26,6 +26,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
    <ul id="nav-mobile" class="right"><!-- navbar links -->
     <li class="waves-effect waves-light" v-if="!isPayloadShow" @click="showMain"><a> Voltar para o Inicio </a></li>
     <li class="waves-effect waves-light" v-if="!isThemesShow" @click="showTheme"><a> Trocar Tema </a></li>
+    <li class="waves-effect waves-light" v-if="!isAboutUsShow" @click="showAboutUs"><a> Sobre Nós </a></li>
     
    </ul>
   </div>
@@ -70,6 +71,15 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
   </div><!-- themes end -->
 
   
+   <div class="aboutUs"  v-show="isAboutUsShow"><!-- about us start -->
+    <h4><b>Sobre Nós</b></h4>
+    <p>CRONO_ DREAMBOX</p>
+    <p> É um projeto BASEADO no <b>BLACK BOX do SALT</b> meu amigo Persa ✔</p>
+    <p> ✔ Um Agradecimento Especial para : Salt seu telegram(@Salt753194)✔</p>
+    <p> ✔ Karo Sharifi - Alazif - Leeful - crono_</p>
+    <p> OBRIGADO! </p>
+    <p></p>
+   </div><!-- about us end -->
    
    
   </div><!-- app end -->
