@@ -96,13 +96,13 @@ nav {
 }
 
 .aboutUs {
- background:rgba(0,0,0,0.7);
- margin:50px;
- color:white;
- padding:5px;
- text-align:center;
- border-radius:10px;
-}
+    background: rgba(0,0,0,0.7);
+    margin: -22px;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 0px;}
 
 .aboutUs p{
  font-size:20px;
