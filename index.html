@@ -24,7 +24,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
   <div class="nav-wrapper">
    <a style=" align-items: center;padding-left: 545px;" href="#" class="brand-logo left">CRONO_ DREAMBOX PS4 V2.0</a>
    <ul id="nav-mobile" class="right"><!-- navbar links -->
-    <li class="waves-effect waves-light" v-if="!isPayloadShow" @click="showMain"><a> Voltar para o Inicio </a></li>
+    <li class="waves-effect waves-light" v-if="!isPayloadShow" @click="showMain"><a> Voltar </a></li>
     <li class="waves-effect waves-light" v-if="!isThemesShow" @click="showTheme"><a> Trocar Tema </a></li>
     <li class="waves-effect waves-light" v-if="!isAboutUsShow" @click="showAboutUs"><a> Sobre Nós </a></li>
     
@@ -74,10 +74,17 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
    <div class="aboutUs"  v-show="isAboutUsShow"><!-- about us start -->
     <h4><b>Sobre Nós</b></h4>
     <p>CRONO_ DREAMBOX</p>
-    <p> É um projeto BASEADO no <b>BLACK BOX do SALT</b> meu amigo Persa ✔</p>
+    <p> É um projeto BASEADO no <b>BLACK BOX do <a href="url">SALT</a></b> meu amigo Persa ✔</p>
     <p> ✔ Um Agradecimento Especial para : Salt seu telegram(@Salt753194)✔</p>
-    <p> ✔ Karo Sharifi - Alazif - Leeful - crono_</p>
+    <p> ✔ Karo Sharifi - AmirHossein Kianfard - Alireza - Alazif - Leeful - crono_ ✔ </p>
     <p> OBRIGADO! </p>
+    <br>
+    <h4><b>About Us</b></h4>
+    <p>CRONO_ DREAMBOX</p>
+    <p>It's a project based on the SALT BLACK BOX my friend Persian ✔</p>
+    <p>✔ Special thanks to: Salt your telegram (@ Salt753194) ✔ </p>
+    <p>✔ Karo Sharifi - AmirHossein Kianfard - Alireza - Alazif - Leeful - crono_ ✔ </p>
+    <p> THANK YOU! </p>
     <p></p>
    </div><!-- about us end -->
    
