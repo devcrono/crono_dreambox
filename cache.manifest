@@ -1,6 +1,6 @@
 CACHE MANIFEST 
-# v4.0 
-# 09/08/2020-01:10:57.44 
+# v6.0 
+# 10/08/2020-12:00:57.44 
 
 index.html
 css/icon.css
@@ -24,6 +24,7 @@ img/icon.png
 img/indice.png
 img/kdumper.png
 img/linux.png
+img/ps4debug.png
 img/remote.png
 img/restore.png
 img/rte.png
@@ -78,11 +79,33 @@ img/tema48.jpg
 img/tema49.jpg
 img/tema50.jpg
 img/tema51.jpg
+img/tema52.jpg
+img/tema53.jpg
+img/tema54.jpg
+img/tema55.jpg
+img/tema56.jpg
+img/tema57.jpg
+img/tema58.jpg
+img/tema59.jpg
+img/tema60.jpg
+img/tema61.jpg
+img/tema62.jpg
+img/tema63.jpg
+img/tema64.jpg
+img/tema65.jpg
+img/tema66.jpg
+img/tema67.jpg
+img/tema68.jpg
+img/tema69.jpg
+img/tema70.jpg
+img/tema71.jpg
+img/tema72.jpg
 img/todex.png
 
 js/materialize.js
 js/vue.js
 
+p/exp_BinLoader.js
 p/exp_common.js
 p/exp_jailbreak.js
 p/exp_loader.js
@@ -99,6 +122,7 @@ p/pl_linux.js
 p/pl_mira.js
 p/pl_mira_unofficial.js
 p/pl_miranohb.js
+p/pl_ps4debug.js
 p/pl_ToDEX.js
 p/pl_updatesDisable.js
 p/pl_updatesEnable.js
