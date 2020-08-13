@@ -22,8 +22,10 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
  
  <nav class="transparent" ><!-- navbar start -->
   <div class="nav-wrapper">
-      <a style=" align-items: center;padding-left: 545px;" class="brand-logo left">CRONO_ DREAMBOX PS4 V3.0</a>
+<!-- <a style=" align-items: center;padding-left: 545px;" class="brand-logo left">CRONO_ DREAMBOX PS4 V3.0</a>-->
+    <a class="brand-logo left">CRONO_ DREAMBOX PS4 V3.0</a>
    <ul id="nav-mobile" class="right"><!-- navbar links -->
+    <li class="waves-effect waves-light" v-if="!is4kThemeShow" @click="show4kTheme"><a> Trocar Tema 4K</a></li>
     <li class="waves-effect waves-light" v-if="!isPayloadShow" @click="showMain"><a> Voltar </a></li>
     <li class="waves-effect waves-light" v-if="!isThemesShow" @click="showTheme"><a> Trocar Tema </a></li>
     <li class="waves-effect waves-light" v-if="!isAboutUsShow" @click="showAboutUs"><a> Sobre Nós </a></li>
@@ -59,7 +61,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
   
   <div class="theme" v-show="isThemesShow"><!-- themes start -->
     
-    <div class="card" v-for="theme,key in themes" @click="changeTheme(key)">
+    <div class="card" v-for="theme,key in themes" @click="changeTheme(key,'normal')">
      <div class="card-image">
       <img :src="'img/'+theme.url">
      </div>
@@ -68,8 +70,20 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      </div>
     </div>
 
-  </div><!-- themes end -->
+  </div><!-- 4k themes end -->
 
+<div class="theme" v-show="is4kThemeShow"><!-- themes start -->
+  
+  <div class="card" v-for="theme,key in themes4k" @click="changeTheme(key,'4k')">
+   <div class="card-image">
+    <img :src="'img/4k/'+theme.url">
+   </div>
+   <div class="card-action waves-effect waves-light" style="width:100%" >
+    <div class="center" :class="{ 'green-text': theme.selected, 'white-text': !theme.selected}">{{theme.selected? 'Tema Atual': 'Usar Esse!'}}</div>
+   </div>
+  </div>
+
+</div><!-- 4k themes end -->
   
    <div class="aboutUs"  v-show="isAboutUsShow"><!-- about us start -->
     <h4><b>Sobre Nós</b></h4>
@@ -98,6 +112,9 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
  if(localStorage.getItem("theme")==null){
   localStorage.setItem("theme",0)
  }
+ if(localStorage.getItem("themeType")==null){
+  localStorage.setItem("themeType","normal")
+ }
  </script>
  <script src="js/vue.js"></script>
  <script type="text/javascript">
@@ -109,7 +126,9 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
     isThemesShow:false,
     isAboutUsShow:false,
     isDetailShow:false,
+    is4kThemeShow:false,
     selectedTheme:localStorage.getItem("theme"),
+    selectedThemeType:localStorage.getItem("themeType"),
     payloads:[
      {name:"1º - JAILBREAK",icon:"hen.png",detail:"1º - JAILBREAK - ATIVAÇÃO MANUAL:<br> Altamente Necessário para começar qualquer processo de Injeção de arquivos payloads e ou rodar jogos FPKG<br> CASO ATIVE ESSE EM SEGUIDA ATIVE O:<br> 2º -  MIRA"},
 
@@ -245,7 +264,10 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      {url:"tema81.jpg",selected:false},
      {url:"tema82.jpg",selected:false},
      {url:"tema83.jpg",selected:false},
-     
+    ],
+    themes4k:[
+      {url:"tema014k.jpg",selected:false},
+      {url:"tema024k.jpg",selected:false},
     ],
     temp:tempC.value
    },
@@ -394,6 +416,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       LoadedMSG="Modo To - DEX Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_todex.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+      var script = document.createElement('script');script.src = "p/exp_c-code.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
      if(key==20){//Carregar web - rte
@@ -434,27 +457,53 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      this.isThemesShow = false
      this.isAboutUsShow = false
      this.isLoaderShow = true
+     this.is4kThemeShow = false
     },
     showTheme:function(){
      this.isLoaderShow = false
      this.isAboutUsShow = false
      this.isThemesShow = true
      this.isPayloadShow = false
+     this.is4kThemeShow = false
+    },
+    show4kTheme:function(){
+     this.isLoaderShow = false
+     this.isAboutUsShow = false
+     this.isThemesShow = false
+     this.isPayloadShow = false
+     this.is4kThemeShow = true
     },
     showAboutUs:function(){
      this.isPayloadShow=false
      this.isAboutUsShow = true
      this.isLoaderShow = false
      this.isThemesShow = false
+     this.is4kThemeShow = false
     },
-    changeTheme:function(key){
-     this.themes[this.selectedTheme].selected=false
-     localStorage.setItem("theme",(key))
-     this.selectedTheme=localStorage.getItem("theme")
-     this.themes[this.selectedTheme].selected=true
-     document.getElementById("body").style.background="url(img/"+this.themes[localStorage.getItem("theme")].url+")";
-     document.getElementById("body").style.backgroundRepeat="no-repeat";
-     document.getElementById("body").style.backgroundSize="100%";
+    changeTheme:function(key,type){
+     if(type=="normal"){
+      this.themes[this.selectedTheme].selected=false
+      this.themes4k[this.selectedTheme].selected=false
+      localStorage.setItem("theme",(key))
+      localStorage.setItem("themeType","normal")
+      this.selectedTheme=localStorage.getItem("theme")
+      this.selectedThemeType=localStorage.getItem("themeType")
+      this.themes[this.selectedTheme].selected=true
+      document.getElementById("body").style.background="url(img/"+this.themes[localStorage.getItem("theme")].url+")";
+      document.getElementById("body").style.backgroundRepeat="no-repeat";
+      document.getElementById("body").style.backgroundSize="100%";
+     }else{
+      this.themes4k[this.selectedTheme].selected=false
+      this.themes[this.selectedTheme].selected=false
+      localStorage.setItem("theme",(key))
+      localStorage.setItem("themeType","4k")
+      this.selectedTheme=localStorage.getItem("theme")
+      this.selectedThemeType=localStorage.getItem("themeType")
+      this.themes4k[this.selectedTheme].selected=true
+      document.getElementById("body").style.background="url(img/4k/"+this.themes4k[localStorage.getItem("theme")].url+")";
+      document.getElementById("body").style.backgroundRepeat="no-repeat";
+      document.getElementById("body").style.backgroundSize="100%";
+     }
     },
     hover:function(key){
      if(key !== undefined){
@@ -474,9 +523,11 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
    },
    
    created(){
-    this.themes[this.selectedTheme].selected=true
-
-
+    if(localStorage.getItem("themeType")=="normal"){
+     this.themes[this.selectedTheme].selected=true
+    }else{
+     this.themes4k[this.selectedTheme].selected=true
+    }
    },
   })
 </script>
@@ -484,9 +535,15 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 
  <script type="text/javascript">
 
+ if(localStorage.getItem("themeType")=="normal"){
   document.getElementById("body").style.background="url(img/"+app.themes[localStorage.getItem("theme")].url+")";
   document.getElementById("body").style.backgroundRepeat="no-repeat";
   document.getElementById("body").style.backgroundSize="100%";
+ }else{
+  document.getElementById("body").style.background="url(img/4k/"+app.themes4k[localStorage.getItem("theme")].url+")";
+  document.getElementById("body").style.backgroundRepeat="no-repeat";
+  document.getElementById("body").style.backgroundSize="100%";
+ }
 
  </script>
  <script type="text/javascript">
