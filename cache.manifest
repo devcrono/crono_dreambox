@@ -1,5 +1,5 @@
 CACHE MANIFEST 
-# v7.0 
+# v8.0 
 # 11/08/2020-00:00:57.44 
 
 index.html
@@ -138,6 +138,7 @@ p/pl_linux.js
 p/pl_mira.js
 p/pl_miranohb.js
 p/pl_ps4debug.js
+p/pl_remoteplay.js
 p/pl_ToDEX.js
 p/pl_updatesDisableBR.js
 p/pl_updatesEnableBR.js
