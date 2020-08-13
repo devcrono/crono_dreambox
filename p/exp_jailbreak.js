@@ -26406,12 +26406,12 @@ var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 
 if (main_ret == 179 || main_ret == 0) {
-window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Exploit Loaded ✔</h1>";
+window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Jailbreak Carregado com Sucesso ✔</h1>";
 
 if (ExploitMira != null){
-	if (ExploitMira == "HEN"){window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Exploit Loaded ✔ Now Loading HEN ...</h1>";}
+	if (ExploitMira == "HEN"){window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Jailbreak Carregado ✔ Agora Carregando HEN ...</h1>";}
 	else {
-	window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Exploit Loaded ✔ Now Loading Mira ...</h1>";}
+	window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Jailbreak Carregado ✔ Agora Carregando MIRA ...</h1>";}
     setTimeout(function(){
     var script = document.createElement('script');script.src = MiraSRC;document.getElementsByTagName('head')[0].appendChild(script);
     var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
@@ -26419,6 +26419,6 @@ if (ExploitMira != null){
   }
 } 
 else {
-  window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Jailbreak failed! - Reboot your PS4 and try again.</h1>";
+  window.msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Falha na Execução do Jailbreak! - Reinicie seu PS4 e Tente Novamente!.</h1>";
 }
 }
