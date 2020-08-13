@@ -405,17 +405,17 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      }
 
      if(key==18){//Carregar remote - play
-      msgs.innerHTML="<div>Carregando REMOTE - PLAY Aguarde ...</div>";
+      msgs.innerHTML="<div> Carregando REMOTE - PLAY Aguarde ... </div>";
       LoadedMSG="REMOTE - PLAY Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_remoteplay.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==19){//Carregar to - dex
-      msgs.innerHTML="<div>Carregando modo TO - DEX Aguarde ...</div>";
-      LoadedMSG="Modo To - DEX Carregado com Sucesso ✔";
-      var script = document.createElement('script');script.src = "p/pl_ToDEX.js";document.getElementsByTagName('head')[0].appendChild(script);
-      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+     if (key == 19) {// Carregar TO - DEX
+       msgs.innerHTML = "<div> Carregando modo TO - DEX Aguarde ... </div>";
+       LoadedMSG = " Modo TO - DEX Carregado com Sucesso ✔";
+       var script = document.createElement ('script'); script.src = "p/pl_ToDEX.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
+       var script = document.createElement ('script'); script.src = "p/exp_loader.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
 
      }
 
