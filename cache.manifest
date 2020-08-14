@@ -1,6 +1,6 @@
 CACHE MANIFEST 
-# v8.0 
-# 11/08/2020-00:00:57.44 
+# v9.0 
+# 14/08/2020-16:00:57.44 
 
 index.html
 css/icon.css
@@ -111,10 +111,16 @@ img/tema80.jpg
 img/tema81.jpg
 img/tema82.jpg
 img/tema83.jpg
+img/tema84.jpg
+img/tema85.jpg
 img/todex.png
 
 img/4k/tema014k.jpg
 img/4k/tema024k.jpg
+img/4k/tema034k.jpg
+img/4k/tema044k.jpg
+img/4k/tema054k.jpg
+img/4k/tema064k.jpg
 
 js/materialize.js
 js/vue.js
