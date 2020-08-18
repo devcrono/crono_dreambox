@@ -136,6 +136,8 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 
      {name:"2º -  MIRA",icon:"hen.png",detail:"2º - MIRA - ATIVAÇÃO MANUAL:<br> Ativa a capacidade de executar payloads e jogos FPKG<br> PARA USAR ESSE MODO ATIVE ANTES O: <br> 1º - JAILBREAK"},
 
+      {name:"HEN 2.1.8 B5 ",icon:"HenEnable.png",detail:"JailBreak + HEN 2.1.8 BETA 5  - ATIVAÇÃO AUTOMATICA: <br>Funções de dessa Versão:<br>feito por MUGIWARA e Crono_<br>Funções de dessa Versão:<br> Debug Settings - Instalação de FPKG - Instalação de FPKG Remoto - UART -  Suporte VR<br>Suporte ao Modo Descanço - Suporte para Trofeus em Debug - Remote Play <br> SUPORTE AO TO - DEX - Suporte ao HD Externo modo 8.XX - Modo Captura de tela Sempre Ativo - Spoofer para firmware 8.0 Em modo Descaço<br> ATIVANDO ESSE NAO PRECISA ATIVAR MAIS NADA ELE JA ATIVA:<br> JAILBREAK + O HEN 2.1.8 BETA 5 "},
+
      {name:"HEN 2.1.7 ",icon:"HenEnable.png",detail:"JailBreak + HEN 2.1.7 - ATIVAÇÃO AUTOMATICA: <br>Funções de dessa Versão:<br>feito por MUGIWARA e Crono_<br>Funções de dessa Versão:<br> Debug Settings - Instalação de FPKG - Instalação de FPKG Remoto - UART -  Suporte VR<br>Suporte ao Modo Descanço - Suporte para Trofeus em Debug - Remote Play <br> SUPORTE AO TO - DEX - Suporte ao HD Externo modo 8.XX - Modo Captura de tela Sempre Ativo - Spoofer para firmware 8.0 Em modo Descaço<br> ATIVANDO ESSE NAO PRECISA ATIVAR MAIS NADA ELE JA ATIVA:<br> JAILBREAK + O HEN 2.1.7"},
 
      {name:"HEN 2.1.5",icon:"HenEnable.png",detail:"JailBreak + HEN 2.1.5 - ATIVAÇÃO AUTOMATICA: <br>Funções de dessa Versão:<br>MESMO HEN 2.1.3 feito pelo SISTRO foi atualizado para a versão 2.1.5 por MUGIWARA, e Traduzido por CRONO_<br>Funções de dessa Versão:<br> Debug Settings - Instalação de FPKG - Instalação de FPKG Remoto - UART -  Suporte VR<br>Suporte ao Modo Descanço - Suporte para Trofeus em Debug - Remote Play <br> SUPORTE AO TO - DEX - Suporte ao HD Externo modo 7.XX - Modo Captura de tela Sempre Ativo - Spoofer para firmware 8.0 em modo Descanço<br> ATIVANDO ESSE NAO PRECISA ATIVAR MAIS NADA ELE JA ATIVA:<br> JAILBREAK + O HEN 2.1.5"},
@@ -209,7 +211,16 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      }
 
 
-         if(key==2){//Carregar Jailbreak + HEN 2.1.7 para 6.72
+         if(key==2){//Carregar Jailbreak + HEN 2.1.8 para 6.72
+      msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.8 Aguarde ...</div>";
+      LoadedMSG="Jailbreak + HEN 2.1.8 Carregado com Sucesso ✔";ExploitMira="yes";MiraSRC="p/pl_HEN2.1.7BR.js";
+      setTimeout(jailbreak,500);
+      var script = document.createElement('script');script.src = "p/pl_HEN2.1.8.js";document.getElementsByTagName('head')[0].appendChild(script);
+      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+     }
+
+
+         if(key==3){//Carregar Jailbreak + HEN 2.1.7 para 6.72
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.7 Aguarde ...</div>";
       LoadedMSG="Jailbreak + HEN 2.1.7 Carregado com Sucesso ✔";ExploitMira="yes";MiraSRC="p/pl_HEN2.1.7BR.js";
       setTimeout(jailbreak,500);
@@ -217,7 +228,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-        if(key==3){//Carregar Jailbreak + hen 2.1.5 para 6.72
+        if(key==4){//Carregar Jailbreak + hen 2.1.5 para 6.72
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.5 Aguarde ...</div>";
       LoadedMSG="Jailbreak + HEN 2.1.5 Carregado com Sucesso ✔";ExploitMira="yes";MiraSRC="p/pl_HEN2.1.5BR.js";
       setTimeout(jailbreak,500);
@@ -226,7 +237,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      }
 
 
-      if(key==4){//Carregar Jailbreak + hen 2.1.3 para 6.72
+      if(key==5){//Carregar Jailbreak + hen 2.1.3 para 6.72
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.3 Aguarde ...</div>";
       LoadedMSG="Jailbreak + HEN 2.1.3 Carregado com Sucesso ✔";ExploitMira="yes";MiraSRC="p/pl_HEN2.1.3.js";
       setTimeout(jailbreak,500);
@@ -234,7 +245,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-   if(key==5){//Carregar Jailbreak + Mira Sem HB
+   if(key==6){//Carregar Jailbreak + Mira Sem HB
       msgs.innerHTML="<div>Carregando jailbreak + Mira sem HB Aguarde ...</div>";
       LoadedMSG="Jailbreak + Mira sem HB Carregado com Sucesso ✔";ExploitMira="yes";MiraSRC="p/pl_miranohb.js";
       setTimeout(jailbreak,500);
@@ -242,7 +253,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==6){//Carregar Jailbreak + Mira + Remote - Play
+     if(key==7){//Carregar Jailbreak + Mira + Remote - Play
       msgs.innerHTML="<div>Carregando jailbreak + Mira + Remote - Play Aguarde ...</div>";
       LoadedMSG="jailbreak + Mira com Remote Play ativado Carregado com Sucesso ✔";ExploitMira="yes";MiraSRC="p/pl_remoteplay.js";
       setTimeout(jailbreak,500);
@@ -250,27 +261,27 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 
      }
-     if(key==7){//Carregar bin - loader
+     if(key==8){//Carregar bin - loader
       msgs.innerHTML="<div>Carregando BIN LOADER Aguarde ...</div>";
       LoadedMSG="Carregado! Agora Envie o Payload desejado para a porta 9021";
       var script = document.createElement('script');script.src = "p/exp_BinLoader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==8){//Carregar ftp
+     if(key==9){//Carregar ftp
       msgs.innerHTML="<div>Carregando FTP Aguarde ...</div>";
       LoadedMSG="FTP Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_ftpBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-        if(key==9){//Carregar dumper pt-br
+        if(key==10){//Carregar dumper pt-br
       msgs.innerHTML="<div>Carregando Dumper V1.8 Aguarde ...</div>";
       LoadedMSG="Dumper V1.8 Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dumperv1.8BR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==10){//Carregar dumper
+     if(key==11){//Carregar dumper
       msgs.innerHTML="<div>Carregando Dumper V1.4 Aguarde ...</div>";
       LoadedMSG="Dumper V1.4 Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dumperv1.4BR.js";document.getElementsByTagName('head')[0].appendChild(script);
@@ -278,70 +289,70 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      }
 
 
-     if(key==11){//Carregar linux - loader
+     if(key==12){//Carregar linux - loader
       msgs.innerHTML="<div>Carregando Linux - Loader Aguarde ...</div>";
       LoadedMSG="Linux - Loader Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_linux.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==12){//Carregar app - to - usb
+     if(key==13){//Carregar app - to - usb
       msgs.innerHTML="<div>Carregando APP - TO - USB Aguarde ...</div>";
       LoadedMSG="APP - TO - USB Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_app2usbBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==13){//Carregar kernel dump
+     if(key==14){//Carregar kernel dump
       msgs.innerHTML="<div>Carregando Dumper de  Kernel Aguarde ...</div>";
       LoadedMSG="Dumper de  Kernel Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_kernelDumperBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==14){//Carregar history block
+     if(key==15){//Carregar history block
       msgs.innerHTML="<div>Carregando Bloquedor de Historico Aguarde ...</div>";
       LoadedMSG="Bloquedor de Historico Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_historyBlockerBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==15){//Carregar updates disable
+     if(key==16){//Carregar updates disable
       msgs.innerHTML="<div>Carregando Desabilitar Updates Aguarde ...</div>";
       LoadedMSG="Updates Desabilitados com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_updatesDisableBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==16){//Carregar updates enable
+     if(key==17){//Carregar updates enable
       msgs.innerHTML="<div>Carregando Habilitar Updates Aguarde ...</div>";
       LoadedMSG="Updates Habilitados com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_updatesEnableBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==17){//Carregar db Backup
+     if(key==18){//Carregar db Backup
       msgs.innerHTML="<div>Carregando Backup do BD do PS4 Aguarde ...</div>";
       LoadedMSG="Backup do BD Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dbBackupBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==18){//Carregar db Restore
+     if(key==19){//Carregar db Restore
       msgs.innerHTML="<div>Carregado Restaurador de BD do PS4 Aguarde ...</div>";
       LoadedMSG="Restauração do BD Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dbRestoreBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==19){//Carregar remote - play
+     if(key==20){//Carregar remote - play
       msgs.innerHTML="<div> Carregando REMOTE - PLAY Aguarde ... </div>";
       LoadedMSG="REMOTE - PLAY Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_remoteplay.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if (key == 20) {// Carregar TO - DEX
+     if (key == 21) {// Carregar TO - DEX
        msgs.innerHTML = "<div> Carregando modo TO - DEX Aguarde ... </div>";
        LoadedMSG = " Modo TO - DEX Carregado com Sucesso ✔";
        var script = document.createElement ('script'); script.src = "p/pl_ToDEX.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
@@ -349,21 +360,21 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 
      }
 
-     if(key==21){//Carregar web - rte
+     if(key==22){//Carregar web - rte
       msgs.innerHTML="<div>Carregando WEB - RTE 6.72 CHEATS Aguarde...</div>";
       LoadedMSG="WEB - RTE 6.72 CHEATS Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_WebRTE.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==22){//Carregar fake - usb
+     if(key==23){//Carregar fake - usb
       msgs.innerHTML="<div>Carregando FAKE - USB Aguarde ...</div>";
       LoadedMSG=" FAKE - USB Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_fakeusb.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==23){//Carregar FAN
+     if(key==24){//Carregar FAN
       msgs.innerHTML="<div>Carregando Controle de Ventoinha (FAN) Aguarde ... </div>";
       setTimeout(function(){
        msgs.style.display="none";
@@ -371,7 +382,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       },1000);
      }
 
-      if(key==24){//PS4 Debug
+      if(key==25){//PS4 Debug
       msgs.innerHTML="<div>Carregando PS4 Debug Aguarde ...</div>";
       LoadedMSG=" PS4 Debug Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_ps4debug.js";document.getElementsByTagName('head')[0].appendChild(script);
