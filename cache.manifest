@@ -1,6 +1,6 @@
 CACHE MANIFEST 
-# v10.0 
-# 19/08/2020-22:00:57.44 
+# v11.0 
+# 27/08/2020-22:00:57.44 
 
 index.html
 css/icon.css
@@ -23,6 +23,7 @@ img/history.png
 img/icon.png
 img/indice.png
 img/kdumper.png
+img/keydumper.png
 img/linux.png
 img/ps4debug.png
 img/remote.png
@@ -42,6 +43,7 @@ p/pl_dbBackupBR.js
 p/pl_dbRestoreBR.js
 p/pl_dumperv1.4BR.js
 p/pl_dumperv1.8BR.js
+p/pl_EAP-KEY-DUMPER.js
 p/pl_fanthreshBR.js
 p/pl_ftp.js
 p/pl_HEN2.1.3.js
