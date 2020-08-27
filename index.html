@@ -6,22 +6,24 @@
  <link rel="stylesheet" href="css/icon.css">
  <link rel="stylesheet" href="css/materialize.css">
  <link rel="stylesheet" href="css/main.css">
+ <script src="p/exp_common.js"></script>
+<script src="p/exp_jailbreak.js"></script>
+
+<script src="p/functions.js"></script>
+<script>function print(){}</script>
+<script src="p/exploit.js"></script>
+<script src="p/jb.js"></script>
  <script>
 
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cash Offline AGUARDE!!!: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Cache Instalado com Sucesso !";},1000);setTimeout(function(){window.msgs.innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+  window.applicationCache.ondownloading=function(){document.getElementById("msgs").innerHTML="Instalando Cash Offline AGUARDE!!!: "};
+  window.applicationCache.onprogress=function(a){document.getElementById("msgs").innerHTML="Status Da Instalação: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
+  window.applicationCache.oncached=function(){document.getElementById("msgs").innerHTML=" Cache Instalado com Sucesso !";setTimeout(function(){document.getElementById("msgs").innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS!"; }, 3000);};
+  window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 1500);};
+  window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 1500);};
 </script>
-
-<script src="p/exp_common.js"></script>
- <script src="p/exp_jailbreak.js"></script>
 
 </head>
 <body id="body"  >
-
-
-
-
-
 <img class="icon" src="img/icon.png"/>
  <div id="app" ><!-- app start -->
  
@@ -32,9 +34,9 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 
         <!-- TEMAS DESABILITADOS PARA TESTE -->
 
-  <!--   <li class="waves-effect waves-light" v-if="!is4kThemeShow" @click="show4kTheme"><a> Trocar Tema 4K</a></li>
+  <!--   <li class="waves-effect waves-light" v-if="!is4kThemeShow" @click="show4kTheme"><a> Trocar Tema 4K</a></li> -->
     <li class="waves-effect waves-light" v-if="!isPayloadShow" @click="showMain"><a> Voltar </a></li>
-    <li class="waves-effect waves-light" v-if="!isThemesShow" @click="showTheme"><a> Trocar Tema </a></li> -->
+    <!--   <li class="waves-effect waves-light" v-if="!isThemesShow" @click="showTheme"><a> Trocar Tema </a></li> -->
     <li class="waves-effect waves-light" v-if="!isAboutUsShow" @click="showAboutUs"><a> Sobre Nós </a></li>
     
    </ul>
@@ -52,8 +54,6 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
    </span>
    <span id="clock" ></span>
   </div>
-
-
 
   <div class="payloads" v-show="isPayloadShow"><!-- payloads list start -->
    <div v-for="payload,key in payloads" @click="loadPlayload(key)" @mouseover="hover(key)" @mouseleave="hover()" class="tile">

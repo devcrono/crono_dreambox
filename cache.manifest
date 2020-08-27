@@ -37,11 +37,15 @@ p/exp_BinLoader.js
 p/exp_common.js
 p/exp_jailbreak.js
 p/exp_loader.js
+p/exploit.js
+p/functions.js
+p/jb.js
 p/pl_app2usbBR.js
 p/pl_dbBackupBR.js
 p/pl_dbRestoreBR.js
 p/pl_dumperv1.4BR.js
 p/pl_dumperv1.8BR.js
+p/pl_EAP-KEY-DUMPER.js
 p/pl_fanthreshBR.js
 p/pl_ftp.js
 p/pl_HEN2.1.3.js
