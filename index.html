@@ -14,10 +14,8 @@
 <script src="p/exploit.js"></script>
 <script src="p/jb.js"></script>
  <script>
-
-  window.applicationCache.ondownloading=function(){document.getElementById("msgs").innerHTML="Instalando Cash Offline AGUARDE!!!: "};
-  window.applicationCache.onprogress=function(a){document.getElementById("msgs").innerHTML="Status Da Instalação: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
-  window.applicationCache.oncached=function(){document.getElementById("msgs").innerHTML=" Cache Instalado com Sucesso !";setTimeout(function(){document.getElementById("msgs").innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS!"; }, 3000);};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cash Offline AGUARDE!!!: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Cache Instalado com Sucesso !";},1000);setTimeout(function(){window.msgs.innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
   window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 1500);};
   window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 1500);};
 </script>
