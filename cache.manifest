@@ -1,6 +1,6 @@
 CACHE MANIFEST 
 # v10.0 
-# 19/08/2020-22:00:57.44 
+# 27/08/2020-17:00:57.44 
 
 index.html
 css/icon.css
@@ -23,6 +23,7 @@ img/history.png
 img/icon.png
 img/indice.png
 img/kdumper.png
+img/keydumper.png
 img/linux.png
 img/ps4debug.png
 img/remote.png
@@ -37,9 +38,6 @@ p/exp_BinLoader.js
 p/exp_common.js
 p/exp_jailbreak.js
 p/exp_loader.js
-p/exploit.js
-p/functions.js
-p/jb.js
 p/pl_app2usbBR.js
 p/pl_dbBackupBR.js
 p/pl_dbRestoreBR.js

@@ -6,22 +6,19 @@
  <link rel="stylesheet" href="css/icon.css">
  <link rel="stylesheet" href="css/materialize.css">
  <link rel="stylesheet" href="css/main.css">
- 
  <script>
+
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cash Offline AGUARDE!!!: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Cache Instalado com Sucesso !";},1000);setTimeout(function(){window.msgs.innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-  window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 1500);};
-  window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 1500);};
 </script>
-<script src="p/exp_common.js"></script>
-<script src="p/exp_jailbreak.js"></script>
 
-<script src="p/functions.js"></script>
-<script>function print(){}</script>
-<script src="p/exploit.js"></script>
-<script src="p/jb.js"></script>
+<script src="p/exp_common.js"></script>
+ <script src="p/exp_jailbreak.js"></script>
+
 </head>
 <body id="body"  >
+
+
 <img class="icon" src="img/icon.png"/>
  <div id="app" ><!-- app start -->
  
@@ -32,9 +29,9 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 
         <!-- TEMAS DESABILITADOS PARA TESTE -->
 
-  <!--   <li class="waves-effect waves-light" v-if="!is4kThemeShow" @click="show4kTheme"><a> Trocar Tema 4K</a></li> -->
+  <!--<li class="waves-effect waves-light" v-if="!is4kThemeShow" @click="show4kTheme"><a> Trocar Tema 4K</a></li>-->
+    <!-- <li class="waves-effect waves-light" v-if="!isThemesShow" @click="showTheme"><a> Trocar Tema </a></li> -->
     <li class="waves-effect waves-light" v-if="!isPayloadShow" @click="showMain"><a> Voltar </a></li>
-    <!--   <li class="waves-effect waves-light" v-if="!isThemesShow" @click="showTheme"><a> Trocar Tema </a></li> -->
     <li class="waves-effect waves-light" v-if="!isAboutUsShow" @click="showAboutUs"><a> Sobre Nós </a></li>
     
    </ul>
@@ -143,7 +140,6 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 
       {name:"HEN 2.2.1",icon:"HenEnable.png",detail:"JailBreak + HEN 2.2.1 com funções TO - DEX - ATIVAÇÃO AUTOMATICA: <br>Feito por Team SGK, MUGIWARA e  Crono_<br>Funções de dessa Versão:<br> Debug Settings - Funções (TO - DEX JA ATIVADA) - Instalação de FPKG - Instalação de FPKG Remoto - Copiar saves Para dispositivo Externo USB<br>UART -  Suporte VR - Suporte ao Modo Descanço - Suporte para Trofeus em Debug - Remote Play <br> SUPORTE AO TO - DEX - Suporte ao HD Externo modo 8.XX - Modo Captura de tela Sempre Ativo <br> Spoofer para firmware 8.0 Em modo Descaço OTIMIZADO<br> ATIVANDO ESSE NAO PRECISA ATIVAR MAIS NADA ELE JA ATIVA:<br> JAILBREAK + O HEN 2.2.1 COM AS FUNÇÕES DO TO - DEX!"},
 
-
       {name:"HEN 2.2",icon:"HenEnable.png",detail:"JailBreak + HEN 2.2 - ATIVAÇÃO AUTOMATICA: <br>Feito por MUGIWARA e Crono_<br>Funções de dessa Versão:<br> Debug Settings - Instalação de FPKG - Instalação de FPKG Remoto - Copiar saves Para dispositivo Externo USB -  UART -  Suporte VR<br>Suporte ao Modo Descanço - Suporte para Trofeus em Debug - Remote Play <br> SUPORTE AO TO - DEX - Suporte ao HD Externo modo 8.XX - Modo Captura de tela Sempre Ativo <br> Spoofer para firmware 8.0 Em modo Descaço OTIMIZADO<br> ATIVANDO ESSE NAO PRECISA ATIVAR MAIS NADA ELE JA ATIVA:<br> JAILBREAK + O HEN 2.2"},
 
       {name:"HEN 2.1.8",icon:"HenEnable.png",detail:"JailBreak + HEN 2.1.8 - ATIVAÇÃO AUTOMATICA: <br>Feito por MUGIWARA e Crono_<br>Funções de dessa Versão:<br> Debug Settings - Instalação de FPKG - Instalação de FPKG Remoto - UART -  Suporte VR<br>Suporte ao Modo Descanço - Suporte para Trofeus em Debug - Remote Play <br> SUPORTE AO TO - DEX - Suporte ao HD Externo modo 8.XX - Modo Captura de tela Sempre Ativo <br> Spoofer para firmware 8.0 Em modo Descaço<br> ATIVANDO ESSE NAO PRECISA ATIVAR MAIS NADA ELE JA ATIVA:<br> JAILBREAK + O HEN 2.1.8"},
@@ -186,13 +182,12 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 
       {name:"DUMPER - KERNEL",icon:"kdumper.png",detail:"DUMPER DE KERNEL: <br>Traduzido por CRONO_<br> Faz uma cópia do kernel do PS4 em um hd externo ou pendrive<br> sera criado um arquivo com o nome Dump.bin<br>PRECISA ESTAR EM EXFAT OU FAT32"},
 
-      {name:"DUMPER - HD PS4",icon:"keydumper.png",detail:"DUMPER DAS CHAVES DO HD DO PS4:<br>PARA USUARIOS AVANÇADOS!!!<br>Faz o Backup da Chave EAP KEY na Unidade Externa USB<br>Esta é a sua chave de descriptografia do HD do PS4 HDD<br> você podera usá-la para montar o HD do seu PS4 HDD em seu PC LIXNUX<br> e descriptografá-la.<br>PRECISA TER UM CONHECIMENTO AVANÇADO EM LINUX"},
+       {name:"DUMPER - HD PS4",icon:"keydumper.png",detail:"DUMPER DAS CHAVES DO HD DO PS4:<br>PARA USUARIOS AVANÇADOS!!!<br>Faz o Backup da Chave EAP KEY na Unidade Externa USB<br>Esta é a sua chave de descriptografia do HD do PS4 HDD<br> você podera usá-la para montar o HD do seu PS4 HDD em seu PC LIXNUX<br> e descriptografá-la.<br>PRECISA TER UM CONHECIMENTO AVANÇADO EM LINUX"},
 
       {name:"LINUX - LOADER",icon:"linux.png",detail:"LINUX - LOADER: <br> Carrega o Linux via porta USB com memória padrão de 2GB para gráficos"},
 
      
     
-
     ],
     themes:[
      {url:"bgcrono_.jpg",selected:false},
@@ -387,12 +382,13 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==25){//Carregar kernel dump
+     if(key==25){//Carregar key hd ps4 dump
       msgs.innerHTML="<div>Carregando Dumper das Chaves do HD do PS4 Aguarde ...</div>";
       LoadedMSG="Dumper das Chaves do HD do PS4 Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_EAP-KEY-DUMPER.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
+
 
       if(key==26){//Carregar linux - loader
       msgs.innerHTML="<div>Carregando Linux - Loader Aguarde ...</div>";
@@ -402,6 +398,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      }
 
     
+
 
     },
 
