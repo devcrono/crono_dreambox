@@ -6,20 +6,20 @@
  <link rel="stylesheet" href="css/icon.css">
  <link rel="stylesheet" href="css/materialize.css">
  <link rel="stylesheet" href="css/main.css">
- <script src="p/exp_common.js"></script>
-<script src="p/exp_jailbreak.js"></script>
-
-<script src="p/functions.js"></script>
-<script>function print(){}</script>
-<script src="p/exploit.js"></script>
-<script src="p/jb.js"></script>
+ 
  <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cash Offline AGUARDE!!!: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Cache Instalado com Sucesso !";},1000);setTimeout(function(){window.msgs.innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
   window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 1500);};
   window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 1500);};
 </script>
+<script src="p/exp_common.js"></script>
+<script src="p/exp_jailbreak.js"></script>
 
+<script src="p/functions.js"></script>
+<script>function print(){}</script>
+<script src="p/exploit.js"></script>
+<script src="p/jb.js"></script>
 </head>
 <body id="body"  >
 <img class="icon" src="img/icon.png"/>
