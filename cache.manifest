@@ -1,6 +1,6 @@
 CACHE MANIFEST 
-# v11.0 
-# 27/08/2020-17:00:57.44 
+# v12.0 
+# 28/08/2020-20:00:57.44 
 
 index.html
 css/icon.css
@@ -27,8 +27,10 @@ img/keydumper.png
 img/linux.png
 img/ps4debug.png
 img/remote.png
+img/RestaurarGame.png
 img/restore.png
 img/rte.png
+img/SaveGame.png
 img/todex.png
 
 js/materialize.js
@@ -48,11 +50,13 @@ p/pl_fanthreshBR.js
 p/pl_ftp.js
 p/pl_HEN2.1.3.js
 p/pl_HEN2.1.8BR.js
+p/pl_HEN2.2.2.js
+p/pl_HEN2.2.4.js
 p/pl_HEN2.2BR.js
-p/pl_HEN2.2.1BR.js
 p/pl_historyBlockerBR.js
 p/pl_kernelDumperBR.js
 p/pl_linux.js
+p/pl_MIRA-HEN-TODEX.js
 p/pl_mira.js
 p/pl_miranohb.js
 p/pl_ps4debug.js
