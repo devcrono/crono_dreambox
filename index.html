@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
 <head>
-   <title>CRONO_ DREAMBOX PS4 V9.0</title>
+   <title>CRONO_ DREAMBOX PS4 V9.5</title>
     <meta charset="UTF-8" />
  <link rel="stylesheet" href="css/icon.css">
  <link rel="stylesheet" href="css/materialize.css">
@@ -18,7 +18,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
  <div id="app" ><!-- app start -->
  <nav class="transparent" ><!-- navbar start -->
   <div class="nav-wrapper">
-    <a class="brand-logo left">CRONO_ DREAMBOX PS4 V9.0</a>
+    <a class="brand-logo left">CRONO_ DREAMBOX PS4 V9.5</a>
    <ul id="nav-mobile" class="right"><!-- navbar links -->
 
         <!-- TEMAS DESABILITADOS PARA TESTE -->
@@ -150,6 +150,8 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       {name:"REMOTE PLAY",icon:"remote.png",detail:"REMOTE PLAY: <br> Ativa o recurso Remote Play para receber a imagem do console em um computador, dispositivo Android, etc."},
 
       {name:"WEB - RTE ",icon:"rte.png",detail:"WEB - RTE 6.72 CHEATS: <br>Pré-requisitos para usar o gerenciador de cheats para os jogos<br> favor acesar o Ps4trainer.com para mais informações!"},
+
+      {name:"AVATAR DUMPER ",icon:"avatarDumper.png",detail:"Avatar Dumper: <br>Feito por Red-J e Traduzido por Crono_<br>Na RAIZ do seu Dipositivo externo USB CRIE uma PASTA com o nome (Avatar_Inject)<br>ele craiara uma pasta de Backup para cada USUARIO que voce tiver em seu PS4.<br>leias as informações contidas no changelog!<br> COMO FUCIONA: PRIMEIRA ATIVAÇÃO BACKPUP DETRO DA PASTA,<br> SEGUNTA ATIVAÇÃO SUBSITUIÇÃO PELO PERSONALIZADO! "},
 
       {name:"PS4 DEBUG",icon:"ps4debug.png",detail:"PS4 DEBUG: <br> É Utilizado para modificações no Sistema PS4 como no caso do <br>(PS4 Reaper, e  trofeis)"},
 
@@ -301,84 +303,91 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==15){//PS4 Debug
+     if(key==15){//Carregar Avatar Dumper
+      msgs.innerHTML="<div>Carregando Dumper de Avatar ...</div>";
+      LoadedMSG="Injetor do Avatar Dumper Carregado com Sucesso ✔ ✔";
+      var script = document.createElement('script');script.src = "p/AvatarDumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+     }
+
+      if(key==16){//PS4 Debug
       msgs.innerHTML="<div>Carregando PS4 Debug Aguarde ...</div>";
       LoadedMSG=" PS4 Debug Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_ps4debug.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==16){//Carregar history block
+      if(key==17){//Carregar history block
       msgs.innerHTML="<div>Carregando Bloquedor de Historico Aguarde ...</div>";
       LoadedMSG="Bloquedor de Historico Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_historyBlockerBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==17) {// Carregar TO - DEX
+      if(key==18) {// Carregar TO - DEX
        msgs.innerHTML = "<div> Carregando modo TO - DEX Aguarde ... </div>";
        LoadedMSG = " Modo TO - DEX Carregado com Sucesso ✔";
        var script = document.createElement ('script'); script.src = "p/pl_ToDEX.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
        var script = document.createElement ('script'); script.src = "p/exp_loader.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
      }
 
-      if(key==18){//Carregar db Backup
+      if(key==19){//Carregar db Backup
       msgs.innerHTML="<div>Carregando Backup do BD do PS4 Aguarde ...</div>";
       LoadedMSG="Backup do BD Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dbBackupBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==19){//Carregar db Restore
+      if(key==20){//Carregar db Restore
       msgs.innerHTML="<div>Carregado Restaurador de BD do PS4 Aguarde ...</div>";
       LoadedMSG="Restauração do BD Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dbRestoreBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
      
-      if(key==20){//PS4 Save Data Backup
+      if(key==21){//PS4 Save Data Backup
       msgs.innerHTML="<div>Carregando PS4 Save Data Backup ...</div>";
       LoadedMSG=" PS4 Save Data Backup Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_SD_Backup.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==21){//PS4 Save Data Restore
+      if(key==22){//PS4 Save Data Restore
       msgs.innerHTML="<div>Carregando PS4 Save Data Restore ...</div>";
       LoadedMSG=" PS4 Save Data Restore Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_SD_Restore.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==22){//Carregar dumper pt-br
+      if(key==23){//Carregar dumper pt-br
       msgs.innerHTML="<div>Carregando Dumper V1.8 Aguarde ...</div>";
       LoadedMSG="Dumper V1.8 Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dumperv1.8BR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==23){//Carregar dumper
+      if(key==24){//Carregar dumper
       msgs.innerHTML="<div>Carregando Dumper V1.4 Aguarde ...</div>";
       LoadedMSG="Dumper V1.4 Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_dumperv1.4BR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==24){//Carregar kernel dump
+      if(key==25){//Carregar kernel dump
       msgs.innerHTML="<div>Carregando Dumper de  Kernel Aguarde ...</div>";
       LoadedMSG="Dumper de  Kernel Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_kernelDumperBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==25){//Carregar key hd ps4 dump
+     if(key==26){//Carregar key hd ps4 dump
       msgs.innerHTML="<div>Carregando Dumper das Chaves do HD do PS4 Aguarde ...</div>";
       LoadedMSG="Dumper das Chaves do HD do PS4 Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_EAP-KEY-DUMPER.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==26){//Carregar linux - loader
+      if(key==27){//Carregar linux - loader
       msgs.innerHTML="<div>Carregando Linux - Loader Aguarde ...</div>";
       LoadedMSG="Linux - Loader Carregado com Sucesso ✔";
       var script = document.createElement('script');script.src = "p/pl_linux.js";document.getElementsByTagName('head')[0].appendChild(script);

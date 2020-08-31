@@ -8,6 +8,7 @@ css/main.css
 css/materialize.css
 
 img/app2usb.png
+img/avatarDumper.png
 img/backup.png
 img/bgcrono_.jpg
 img/binloader.png
@@ -36,6 +37,7 @@ img/todex.png
 js/materialize.js
 js/vue.js
 
+p/AvatarDumper.js
 p/exp_BinLoader.js
 p/exp_common.js
 p/exp_jailbreak.js
