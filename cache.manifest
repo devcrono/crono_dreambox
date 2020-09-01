@@ -37,7 +37,7 @@ img/todex.png
 js/materialize.js
 js/vue.js
 
-p/AvatarDumper.js
+p/AvatarDumperBR.js
 p/exp_BinLoader.js
 p/exp_common.js
 p/exp_jailbreak.js
