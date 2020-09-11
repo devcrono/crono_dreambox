@@ -10,8 +10,8 @@
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cash Offline AGUARDE!!!: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Cache Instalado com Sucesso !";},2000);setTimeout(function(){window.msgs.innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS!";},5000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-  window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 1500);};
-  window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 1500);};
+  window.applicationCache.onnoupdate=function(){setTimeout(function(){load_JB(); }, 450);};
+  window.applicationCache.onerror=function(){setTimeout(function(){load_JB(); }, 450);};
 </script>
 <body id="body"  >
 <a href="https://twitter.com/cronocardoso"><img class="icon" src="img/icon.png"/></a>
@@ -60,7 +60,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
     <p>{{changeText("É um projeto com o VISUAL BASEADO no HOST REI DA NOITE do SALT meu amigo Persa✔","It is a project with VISUAL BASED on the HOST KING OF THE NIGHT of SALT my friend Persian✔","Es un proyecto con VISUAL BASADO en el ANFITRIÓN REY DE LA NOCHE de SALT mi amigo Persa✔","C'est un projet avec VISUAL BASÉ sur le ROI HÔTE DE LA NUIT de SALT mon ami persan ✔")}}</p>
     <p>{{changeText("✔Um Agradecimento Especial para : SALT seu telegram(@Salt753194)✔","✔Special thanks to: SALT your telegram (@Salt753194)✔","✔Un agradecimiento especial a: SALT su telegrama (@Salt753194)✔","✔Remerciements particuliers à: SALT votre télégramme (@Salt753194)✔")}}</p>
    <p><h4>{{changeText("Um Agradecimento Especial","A Special Thanks","Un agradecimiento especial","Un merci spécial")}}<h4></p>
-    <p>✔Crono_ - Mugiwara(@84Ciss) - GamerHack93 - SALT - Karo Sharifi - Systro  - frangarcj - 84Ciss -  CTurt - wildcard✔</p>
+    <p>✔Crono_ - Mugiwara(@84Ciss) - SALT - Karo Sharifi - Systro  - frangarcj - 84Ciss -  CTurt - wildcard✔</p>
     <P>✔AmirHossein Kianfard - Alireza - Alazif - Leeful -sleirsgoevy - GamerHack93 - DefaultDNB - golde✔</p> 
     <P>✔theorywrong - Seremo - z80 - balika011 - Zer0xFF - SpecterDev - flatz - xvortex  - 2much4u✔</p>
     <P>✔bigboss - Rogero - AbkarinoMHM - fjtrujy - CelesteBlue - valentinbreiz - Joonie - AlexAltea - qwertyoruiop✔</p>
@@ -205,14 +205,14 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      fr_detail:"PS4 DEBUG: <br> Il est utilisé pour les modifications du système PS4 comme dans le cas de <br> (trophées PS4 Reaper et Debug, entre autres)"
    },
 
-	 {name:"BLOQUEAR HISTORICO",icon:"history.png",
+   {name:"BLOQUEAR HISTORICO",icon:"history.png",
    br_detail:"BLOQUEAR HISTORICO: <br>Traduzido por CRONO_<br>Desative a abertura automática da última página usada no navegador PS4.<br>RE-ENVIE ESTE PEYLOAD CASO QUEIRA VOLTAR AO NORMAL!",
    eng_detail:"HISTORY BLOCKER : <br> Translated by CRONO_ <br> Disable automatic opening of the last page used in the PS4 browser. <br> RE-SEND THIS PEYLOAD IF YOU WANT TO RETURN TO NORMAL!",
    esp_detail:"HISTORIAL DEL BLOQUE: <br> Traducido por CRONO_ <br> Deshabilita la apertura automática de la última página usada en el navegador de PS4. <br> ¡VUELVE A ENVIAR ESTE PEYLOAD SI QUIERES VOLVER A NORMAL!",
    fr_detail:"HISTORIQUE DU BLOC: <br> Traduit par CRONO_ <br> Désactivez l'ouverture automatique de la dernière page utilisée dans le navigateur PS4. <br> RENVOYEZ CE PEYLOAD SI VOUS VOULEZ REVENIR AU NORMAL!"
  },
 
-	 {name:"TO - DEX",icon:"todex.png",  
+   {name:"TO - DEX",icon:"todex.png",  
    br_detail:"TO - DEX: <br>Ativa o menu de depuração do console no modo (Test - Dev - Kit),<br> Que Habilita Algumas Opções Especiais no menu dos Jogos <br> PARA USAR ESSE MODO ATIVE ANTES :<br> MIRA ou HEN",
    eng_detail:"TO - DEX: <br> Activate the console debug menu in (Test - Dev - Kit) mode, <br> That Enables Some Special Options in the Games menu <br> TO USE THIS MODE ACTIVATE BEFORE: <br> MIRA or HEN",
    esp_detail:"TO - DEX: <br> Activa el menú de depuración de la consola en modo (Test - Dev - Kit), <br> Lo que habilita algunas opciones especiales en el menú Juegos <br> PARA USAR ESTE MODO ACTIVAR ANTES: <br> MIRA o HEN",
@@ -261,14 +261,14 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
      fr_detail:"DUMPER V1.4: <br> Traduit par CRONO_ <br> Avec cette Payload, il est possible de faire le Dumper de disques physiques ou de titres numériques de la console pour un stockage USB <br> VOUS DEVEZ ÊTRE EN EXFAT OU FAT32"
    },
 
-	 {name:"DUMPER - KERNEL",icon:"kdumper.png",
+   {name:"DUMPER - KERNEL",icon:"kdumper.png",
    br_detail:"DUMPER DE KERNEL: <br>Traduzido por CRONO_<br> Faz uma cópia do kernel do PS4 em um hd externo ou pendrive<br> sera criado um arquivo com o nome Dump.bin<br>PRECISA ESTAR EM EXFAT OU FAT32",
    eng_detail:"KERNEL DUMPER: <br> Translated by CRONO_ <br> Make a copy of the PS4 kernel on an external hard drive or USB stick and a file will be created with the name Dump.bin <br> YOU MUST BE IN EXFAT OR FAT32",
    esp_detail:"KERNEL DUMPER: <br> Traducido por CRONO_ <br> Haga una copia del kernel de PS4 en un disco duro externo o memoria USB y se creará un archivo con el nombre Dump.bin <br> DEBE ESTAR EN EXFAT O FAT32",
    fr_detail:"KERNEL DUMPER: <br> Traduit par CRONO_ <br> Faites une copie du noyau PS4 sur un disque dur externe ou une clé USB et un fichier sera créé avec le nom Dump.bin <br> VOUS DEVEZ ÊTRE EN EXFAT OU FAT32"
  },
 
-	 {name:"DUMPER - HD PS4",icon:"keydumper.png",
+   {name:"DUMPER - HD PS4",icon:"keydumper.png",
    br_detail:"DUMPER DAS CHAVES DO HD DO PS4:<br>PARA USUARIOS AVANÇADOS!!!<br>Faz o Backup da Chave EAP KEY na Unidade Externa USB<br>Esta é a sua chave de descriptografia do HD do PS4 HDD<br> você podera usá-la para montar o HD do seu PS4 HDD em seu PC LINUX e descriptografá-la.<br>PRECISA TER UM CONHECIMENTO AVANÇADO EM LINUX",
    eng_detail:"PS4 HD KEYS DUMPER: <br> FOR ADVANCED USERS !!! <br> Back up the EAP KEY to the USB External Drive <br> This is your PS4 HDD HD decryption key <br> you can use it to mount the HD of your PS4 HDD on your LINUX PC and decrypt it. <br> YOU NEED TO HAVE ADVANCED KNOWLEDGE IN LINUX ",
    esp_detail:"PS4 HD KEYS DUMPER: <br> ¡PARA USUARIOS AVANZADOS! <br> Haga una copia de seguridad de la EAP KEY en la unidad externa USB <br> Esta es su clave de descifrado de PS4 HDD HD <br> puedes usarlo para montar el HD de tu PS4 HDD en tu PC LINUX y descifrarlo. <br> NECESITAS TENER CONOCIMIENTOS AVANZADOS EN LINUX ",
