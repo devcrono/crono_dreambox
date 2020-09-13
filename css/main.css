@@ -14,7 +14,7 @@
  
     display: inline-table;
     width: 120px;
-    height: 146px;
+    height: 155px;
     margin: 5px;
     background: #4c4c4cb3;
     transition: 1s;
@@ -44,8 +44,8 @@ line-height: auto;
 }
 
 .tile img{
-    width: 50%;
-    margin-left: 25%;
+    width: 60%;
+    margin-left: 20%;
     margin-top: 5%;
 }
 
