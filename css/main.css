@@ -26,7 +26,7 @@
 }
 
 .nav-wrapper{
- background-image: linear-gradient(180deg,#D6080F,#000);
+ background-image: linear-gradient(180deg,#00f,#000);
 }
 
 #nav-mobile li{
@@ -51,7 +51,7 @@ line-height: auto;
 
 .tile:hover{
  animation:shake 1s;
- background-image: linear-gradient(180deg,#000,#D6080F);
+ background-image: linear-gradient(180deg,#000,#00f);
  background-size:100% 100%;
  background-repeat:no-repeat;
  cursor: pointer;
@@ -66,7 +66,7 @@ nav{
 }
 
 .brand-logo{
- margin-left:10px;
+ margin-left:125px;
  font-weight:bold;
  text-shadow: 0px 0px 2px white;
  float: center;
@@ -111,7 +111,7 @@ nav{
 
 
 .loader{
-font-size: 18px;
+font-size: 15px;
 width: 100%;
 background: #4b4b4b;;
 color: white;
@@ -128,18 +128,22 @@ border-bottom-right-radius: 30px;
 
 #msgs{
  font-weight:bold;
- padding-right: 130px;
+ margin-left: 2%;
+ font-size: 20px;      
+
 }
 
 #clock{
- float:right;
- margin-right:5%;
- font-weight:bold;
+float: right;
+margin-right: 5%;
+margin-top: 0%;
+font-weight: bold;
 }
 
 #date{
  float:left;
  margin-left:2%;
+ margin-top: 0%;
  font-weight:bold;
 }
 
@@ -148,7 +152,7 @@ border-bottom-right-radius: 30px;
  width:80%;
  text-align:center;
  min-height:15px;
- background-image: linear-gradient(180deg,#D6080F,#000,#D6080F);
+ background-image: linear-gradient(180deg,#00f,#000,#00f);
  border-radius:7px;
  color:white;
  padding:0px;
@@ -177,7 +181,7 @@ border-bottom-right-radius: 30px;
  margin-right:5px;
  margin-left:5px;
  font-weight:bold;
- color: #00ff35;
+ color: #ff8203;
  font-size: 20px;
 }
 
@@ -204,4 +208,46 @@ border-bottom-right-radius: 30px;
     height: 200px;
     top: 65%;
     right: 2%;
+}
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    padding-left: 12%;
+}
+.sucessos{
+color: #00ff35;
+font-size:100%; 
+float:left;
+margin-left:-11%;
+font-weight:bold;
+margin-top: 1.45%;
+font-size:20px;
+font-family: 'Roboto Condensed';
+}
+
+.falhas{
+color: #ff0000;
+font-size: 100%;
+font-weight: bold;
+float: right;
+margin-right: -3%;
+margin-top: 1.45%;
+font-size: 20px;
+font-family: 'Roboto Condensed';
+}
+
+.brand-logo-credito{
+    margin-left: 20%;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px white;
+    float: center;
+    margin-top: 0%;
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
 }
