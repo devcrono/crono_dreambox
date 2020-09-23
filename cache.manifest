@@ -53,6 +53,7 @@ p/exp_BinLoader.js
 p/exp_loader.js
 p/manu_exp_common.js
 p/pl_app2usbBR.js
+p/pl_CacheUSB.js
 p/pl_dbBackupBR.js
 p/pl_dbRestoreBR.js
 p/pl_dumperv1.4BR.js
@@ -63,6 +64,7 @@ p/pl_ftp.js
 p/pl_HEN2.1.3.js
 p/pl_HEN2.2.4BR.js
 p/pl_HEN2.2.5BR.js
+p/pl_HEN3.0.0BR.js
 p/pl_historyBlockerBR.js
 p/pl_kernelDumperBR.js
 p/pl_linux.js

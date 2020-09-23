@@ -72,6 +72,8 @@ line-height: auto;
     margin-top: 5%;
 }
 
+
+
 .tile:hover{
  animation:shake 1s;
  background-image: linear-gradient(180deg,#000,#00f);
@@ -176,8 +178,14 @@ line-height: auto;
 }
 
 
+.white-text-lancador {
+    color: #fff !important;
+}
+
 .white-text {
     color: #fff !important;
+ line-height: 20px; 
+
 }
 .nav-wrapper{
  background-image: linear-gradient(180deg,#00f,#000);

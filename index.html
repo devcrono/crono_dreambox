@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
 <head>
-<title>CRONO_ DREAMBOX PS4 V12</title>
+<title>CRONO_ DREAMBOX PS4 V12.5</title>
 <meta charset="UTF-8" />
 <link rel="shortcut icon" href="img/favicon.ico" />
 <link rel="stylesheet" href="css/iconhome.css">
@@ -16,27 +16,33 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 <a href="https://twitter.com/cronocardoso"><img class="icon" src="img/icon.gif"/></a> 
 <script src="p/cal.js"></script>
 <div style="background: url('img/fundo.jpg')50%/100% no-repeat;">
+<div id="app" >
 <nav class="transparent" >
 <div class="nav-wrapper">
 <span id="date" ></span><span id="clock" ></span>
-<h1 class="brand-logo">CRONO_ DREAMBOX PS4 V12</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<h1 href="javascript:void(0)"  class="brand-logo">CRONO_ DREAMBOX PS4 V12.5</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 <h1 class="msgs" id="msgs">SELECIONE A FORMA DO EXPLOIT! / SELECT THE FORM OF THE EXPLOIT!</h1>
 </div>
 </nav>
 <br><br><br><br>
 <div class="menu">
-<button class="tile" onclick="load_auto(); return false"><img src="img/HenEnable.png"><p class="white-text">Automático  Automatic</p>
-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<button class="tile" onclick="load_manual(); return false"><img src="img/HenEnable.png"><p class="white-text">Manual Manual</p>
-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button class="tile" onclick="load_creditos(); return false"><img src="img/creditos.png"><p class="white-text">Créditos  Credits</p>
-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
+<button class="tile" onclick="load_auto(); return false"><img src="img/HenEnable.png"><p class="white-text-lancador">Automático  Automatic</p>
+</button>&nbsp;
+<button class="tile" onclick="load_manual(); return false"><img src="img/HenEnable.png"><p class="white-text-lancador">Manual Manual</p>
+</button>&nbsp;
+<button class="tile" onclick="inject_payload('p/pl_CacheUSB.js'); return false"><img src="img/restore.png"><p class="white-text">Cache no USB Cache on USB</p>
+</button>&nbsp;
+<button class="tile" onclick="load_creditos(); return false"><img src="img/creditos.png"><p class="white-text-lancador">Créditos  Credits</p>
+</button>
+
 </div>
- 
- <script src="js/vue.js"></script>
+ </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+ <script src="p/manu_exp_common.js"></script>
  <script src="js/materialize.js"></script>
+  <script src="js/vue.js"></script>
 <script>
 function load_auto(){
   var link = document.createElement('a');
@@ -52,6 +58,14 @@ function load_manual(){
 	  link.target='';
 	  link.click();
 }
+
+function inject_payload(){
+  msgs.innerHTML="<div>Carregando Cache USB AGUARDE! ... / Loading USB Cache WAIT! ...</div>";
+      LoadedMSG="Cache USB Realizado com Sucesso na USB ✔ / USB Cache Successfully Performed on USB ✔";
+      var script = document.createElement('script');script.src = "p/pl_CacheUSB.js";document.getElementsByTagName('head')[0].appendChild(script);
+      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
+}
 function load_creditos(){
   var link = document.createElement('a');
 	  document.body.appendChild(link);
@@ -60,6 +74,8 @@ function load_creditos(){
 	  link.click();
 }
 </script>
+
+
 </div>
 </body>
 </html>
