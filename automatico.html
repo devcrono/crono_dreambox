@@ -164,6 +164,9 @@ window.failCounter.innerHTML=localStorage.failcount;
    {name:"LINUX - LOADER",icon:"linux.png",
  },
 
+{name:"Cache USB",icon:"restore.png",
+ },
+
 ],
     themes:[
      {url:"fundo.jpg",selected:false},   
@@ -359,6 +362,13 @@ window.failCounter.innerHTML=localStorage.failcount;
       msgs.innerHTML="<div>Carregando Linux - Loader Aguarde ... / Loading Linux - Loader Please wait ...</div>";
       LoadedMSG="Linux - Loader Carregado com Sucesso ✔ / Linux - Loader Loaded Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_linux.js";document.getElementsByTagName('head')[0].appendChild(script);
+      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+     }
+
+     if(key==27){//Carregar Cache USB - loader
+      msgs.innerHTML="<div>Carregando Cache USB AGUARDE! ... / Loading USB Cache WAIT! ...</div>";
+      LoadedMSG="Cache USB Realizado com Sucesso na USB ✔ / USB Cache Successfully Performed on USB ✔";
+      var script = document.createElement('script');script.src = "p/pl_CacheUSB.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
     },

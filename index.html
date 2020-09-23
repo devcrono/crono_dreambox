@@ -30,8 +30,6 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Ca
 </button>&nbsp;
 <button class="tile" onclick="load_manual(); return false"><img src="img/HenEnable.png"><p class="white-text-lancador">Manual Manual</p>
 </button>&nbsp;
-<button class="tile" onclick="inject_payload('p/pl_CacheUSB.js'); return false"><img src="img/restore.png"><p class="white-text">Cache no USB Cache on USB</p>
-</button>&nbsp;
 <button class="tile" onclick="load_creditos(); return false"><img src="img/creditos.png"><p class="white-text-lancador">Créditos  Credits</p>
 </button>
 
@@ -59,13 +57,6 @@ function load_manual(){
 	  link.click();
 }
 
-function inject_payload(){
-  msgs.innerHTML="<div>Carregando Cache USB AGUARDE! ... / Loading USB Cache WAIT! ...</div>";
-      LoadedMSG="Cache USB Realizado com Sucesso na USB ✔ / USB Cache Successfully Performed on USB ✔";
-      var script = document.createElement('script');script.src = "p/pl_CacheUSB.js";document.getElementsByTagName('head')[0].appendChild(script);
-      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-
-}
 function load_creditos(){
   var link = document.createElement('a');
 	  document.body.appendChild(link);
