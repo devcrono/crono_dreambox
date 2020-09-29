@@ -177,7 +177,7 @@ window.failCounter.innerHTML=localStorage.failcount;
     loadPlayload: function(key){
       if(key==0){//Carregar Jailbreak + HEN + MIRA + TO - DEX para 6.72
       msgs.innerHTML="<div>Carregando Jailbreak + HEN + MIRA + TO - DEX Aguarde ... / Loading Jailbreak + HEN + MIRA + TO - DEX Please wait...</div>";
-      LoadedMSG="Jailbreak + HEN + MIRA + TO - DEX Carregado com Sucesso ✔ /Jailbreak + HEN + MIRA + TO - DEX Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_MIRA-HEN-TODEX.js";
+      LoadedMSG="Jailbreak + HEN + MIRA + TO - DEX Carregado com Sucesso ✔ <br> Jailbreak + HEN + MIRA + TO - DEX Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_MIRA-HEN-TODEX.js";
       var script = document.createElement('script');script.src = "p/pl_MIRA-HEN-TODEX.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      } 
@@ -220,7 +220,7 @@ window.failCounter.innerHTML=localStorage.failcount;
 
       if(key==6){//Carregar bin - loader
       msgs.innerHTML="<div>Carregando BIN LOADER Aguarde ... / Loading BIN LOADER Please wait ...</div>";
-      LoadedMSG="Carregado! Agora Envie o Payload desejado para a porta 9021 / Loaded! Now Send the desired Payload to port 9021";
+      LoadedMSG="Carregado! Agora Envie o Payload desejado para a porta 9021 <br> Loaded! Now Send the desired Payload to port 9021";
       var script = document.createElement('script');script.src = "p/exp_BinLoader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
