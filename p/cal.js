@@ -54,7 +54,7 @@
   days%=1461;
   if(days <= 366){
   jy+=parseInt((days-1)/366);
-  days=(days-1)%366;
+  days=(days-1)%365;
   }
   jm=(days < 186)?1+parseInt(days/31):7+parseInt((days-186)/30);
   jd=1+((days < 186)?(days%31):((days-186)%30));

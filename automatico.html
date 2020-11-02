@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
 <head>
-<title>CRONO_ DREAMBOX PS4 V13 AUTOMÁTICO</title>
+<title>CRONO_ DREAMBOX PS4 V13.5 AUTOMÁTICO</title>
 <meta charset="UTF-8" />
 <link rel="shortcut icon" href="img/favicon.ico" />
 <link rel="stylesheet" href="css/icon.css">
@@ -32,7 +32,7 @@ window.failCounter.innerHTML=localStorage.failcount;
 <div class="nav-wrapper">
 <span id="date" ></span>
 <span id="clock" ></span>
-<a href="javascript:void(0)" class="brand-logo left">CRONO_ DREAMBOX PS4 V13 AUTOMÁTICO</a>
+<a href="javascript:void(0)" class="brand-logo left">CRONO_ DREAMBOX PS4 V13.5 AUTOMÁTICO</a>
 <a  class="sucessos">SUCESSOS = <span id=passCounter></span></a>
 <a  class="falhas">FALHAS = <span id=failCounter></span></a>  
 <ul id="nav-mobile" class="right"><!-- navbar links -->   
@@ -82,14 +82,18 @@ window.failCounter.innerHTML=localStorage.failcount;
     selectedTheme:localStorage.getItem("theme"),
     payloads:[
 
+     
      {name:"HEN 3.0.0",icon:"HenEnable.png",
      
    },
-
-    {name:"HEN 2.2.5",icon:"HenEnable.png",
+ 
+   {name:"HEN 2.2.5",icon:"HenEnable.png",
    },
 
-     {name:"HEN 2.1.3",icon:"HenEnable.png",
+   {name:"HEN 2.1.3 + VR",icon:"HenVR.png",
+   },
+
+   {name:"HEN 2.1.3",icon:"HenEnable.png",
    },
 
      {name:"MIRA",icon:"hen.png",
@@ -183,48 +187,55 @@ window.failCounter.innerHTML=localStorage.failcount;
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==2){//Carregar Jailbreak + hen 2.1.3 para 6.72
+     if(key==2){//Carregar Jailbreak + HEN 2.1.3 + VR para 6.72
+      msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.3 + VR Aguarde ... / Loading Jailbreak + HEN 2.1.3 + VR Please wait ...</div>";
+      LoadedMSG="Jailbreak + HEN 2.1.3 + VR Carregado com Sucesso ✔ / Jailbreak + HEN 2.1.3 + VR Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_HENVR.js"
+      var script = document.createElement('script');script.src = "p/p/pl_HENVR.js";document.getElementsByTagName('head')[0].appendChild(script);
+      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+     }
+
+      if(key==3){//Carregar Jailbreak + hen 2.1.3 para 6.72
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.3 Aguarde ... / Loading Jailbreak + HEN 2.1.3 Please wait ...</div>";
       LoadedMSG="Jailbreak + HEN 2.1.3 Carregado com Sucesso ✔ / Jailbreak + HEN 2.1.3 Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_HEN2.1.3.js";
       var script = document.createElement('script');script.src = "p/pl_HEN2.1.3.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==3){//Carregar Mira
+      if(key==4){//Carregar Mira
       msgs.innerHTML="<div>Carregando Jailbreak + MIRA Aguarde ... / Loading Jailbreak + MIRA Please wait ...</div>";
       LoadedMSG="Jailbreak + MIRA Carregado com Sucesso ✔ / Jailbreak + MIRA Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_mira.js";
        var script = document.createElement('script');script.src = "p/pl_mira.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==4){//Carregar Jailbreak + Mira Sem HB
+      if(key==5){//Carregar Jailbreak + Mira Sem HB
       msgs.innerHTML="<div>Carregando jailbreak + Mira sem HB Aguarde ... / Loading jailbreak + Mira without HB Please wait ...</div>";
       LoadedMSG="Jailbreak + Mira sem HB Carregado com Sucesso ✔ / Jailbreak + Mira without HB Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_miranohb.js";
        var script = document.createElement('script');script.src = "p/pl_miranohb.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==5){//Carregar bin - loader
+      if(key==6){//Carregar bin - loader
       msgs.innerHTML="<div>Carregando BIN LOADER Aguarde ... / Loading BIN LOADER Please wait ...</div>";
       LoadedMSG="Carregado! Agora Envie o Payload desejado para a porta 9021 <br> Loaded! Now Send the desired Payload to port 9021";
       var script = document.createElement('script');script.src = "p/exp_BinLoader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==6){//Carregar ftp
+      if(key==7){//Carregar ftp
       msgs.innerHTML="<div>Carregando FTP Aguarde ... / Loading FTP Please wait ...</div>";
       LoadedMSG="FTP Carregado com Sucesso ✔ / FTP Uploaded Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_ftp.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==7){//Carregar app - to - usb
+      if(key==8){//Carregar app - to - usb
       msgs.innerHTML="<div>Carregando APP - TO - USB Aguarde ... / Loading APP - TO - USB Please wait ...</div>";
       LoadedMSG="APP - TO - USB Carregado com Sucesso ✔ / APP - TO - USB Successfully Loaded ✔";
       var script = document.createElement('script');script.src = "p/pl_app2usbBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==8){//Carregar FAN
+      if(key==9){//Carregar FAN
       msgs.innerHTML="<div>Carregando Controle de Ventoinha (FAN) Aguarde ...  / Loading Fan Control (FAN) Please wait ...</div>";
       setTimeout(function(){
        msgs.style.display="none";
@@ -232,14 +243,14 @@ window.failCounter.innerHTML=localStorage.failcount;
       },1000);
      }
 
-      if(key==9){//Carregar updates disable
+      if(key==10){//Carregar updates disable
       msgs.innerHTML="<div>Carregando Desabilitar Updates Aguarde ... / Loading Disable Updates Please wait ...</div>";
       LoadedMSG="Updates Desabilitados com Sucesso ✔ / Updates Disabled Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_updatesDisableBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==10){//Carregar updates enable
+      if(key==11){//Carregar updates enable
       msgs.innerHTML="<div>Carregando Habilitar Updates Aguarde ... / Loading Enable Updates Please wait ...</div>";
       LoadedMSG="Updates Habilitados com Sucesso ✔ / Updates Enabled Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_updatesEnableBR.js";document.getElementsByTagName('head')[0].appendChild(script);
@@ -247,70 +258,70 @@ window.failCounter.innerHTML=localStorage.failcount;
      }
 
 
-      if(key==11){//Carregar web - rte
+      if(key==12){//Carregar web - rte
       msgs.innerHTML="<div>Carregando WEB - RTE 6.72 CHEATS Aguarde... / Loading WEB - RTE 6.72 CHEATS Please wait ...</div>";
       LoadedMSG="WEB - RTE 6.72 CHEATS Carregado com Sucesso ✔ / WEB - RTE 6.72 CHEATS Successfully Loaded ✔ ";
       var script = document.createElement('script');script.src = "p/pl_WebRTE.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==12){//Carregar Avatar Dumper
+     if(key==13){//Carregar Avatar Dumper
       msgs.innerHTML="<div>Carregando Dumper de Avatar ... / Loading Avatar Dumper ...</div>";
       LoadedMSG="Injetor do Avatar Dumper Carregado com Sucesso ✔ / Avatar Dumper Injector Successfully Loaded ✔";
       var script = document.createElement('script');script.src = "p/AvatarDumperBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==13){//PS4 Debug
+      if(key==14){//PS4 Debug
       msgs.innerHTML="<div>Carregando PS4 Debug Aguarde ... / Loading PS4 Debug Please wait ...</div>";
       LoadedMSG=" PS4 Debug Carregado com Sucesso ✔ / PS4 Debug Successfully Loaded ✔";
       var script = document.createElement('script');script.src = "p/pl_ps4debug.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==14){//Carregar history block
+      if(key==15){//Carregar history block
       msgs.innerHTML="<div>Carregando Bloquedor de Historico Aguarde ... / Loading History Blocker Please wait ...</div>";
       LoadedMSG="Bloquedor de Historico Carregado com Sucesso ✔ / History Blocker Loaded Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_historyBlockerBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==15) {// Carregar TO - DEX
+      if(key==16) {// Carregar TO - DEX
        msgs.innerHTML = "<div> Carregando modo TO - DEX Aguarde ...  / Loading TO - DEX mode Please wait ...</div>";
        LoadedMSG = " Modo TO - DEX Carregado com Sucesso ✔ / TO - DEX Mode Loaded Successfully ✔";
        var script = document.createElement ('script'); script.src = "p/pl_ToDEX.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
        var script = document.createElement ('script'); script.src = "p/exp_loader.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
      }
 
-      if(key==16){//Carregar db Backup
+      if(key==17){//Carregar db Backup
       msgs.innerHTML="<div>Carregando Backup do BD do PS4 Aguarde ... / Loading PS4 BD Backup Please wait ...</div>";
       LoadedMSG="Backup do BD Carregado com Sucesso ✔ / BD Backup Loaded Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_dbBackupBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==17){//Carregar db Restore
+      if(key==18){//Carregar db Restore
       msgs.innerHTML="<div>Carregado Restaurador de BD do PS4 Aguarde ... / Loaded PS4 BD Restorer Please wait ...</div>";
       LoadedMSG="Restauração do BD Carregado com Sucesso ✔ / BD Restore Loaded Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_dbRestoreBR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      } 
 
-      if(key==18){//Carregar dumper pt-br
+      if(key==19){//Carregar dumper pt-br
       msgs.innerHTML="<div>Carregando Dumper V1.8 Aguarde ... / Loading Dumper V1.8 Please wait ...</div>";
       LoadedMSG="Dumper V1.8 Carregado com Sucesso ✔ / Dumper V1.8 Successfully Loaded ✔";
       var script = document.createElement('script');script.src = "p/pl_dumperv1.8BR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==19){//Carregar dumper
+      if(key==20){//Carregar dumper
       msgs.innerHTML="<div>Carregando Dumper V1.4 Aguarde ... / Loading Dumper V1.4 Please wait ...</div>";
       LoadedMSG="Dumper V1.4 Carregado com Sucesso ✔ / Dumper V1.4 Successfully Loaded ✔";
       var script = document.createElement('script');script.src = "p/pl_dumperv1.4BR.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-      if(key==20){//Carregar kernel dump
+      if(key==21){//Carregar kernel dump
       msgs.innerHTML="<div>Carregando Dumper de  Kernel Aguarde ... / Loading Kernel Dumper Please wait ...</div>";
       LoadedMSG="Dumper de  Kernel Carregado com Sucesso ✔ / Successfully Loaded Kernel Dumper ✔";
       var script = document.createElement('script');script.src = "p/pl_kernelDumperBR.js";document.getElementsByTagName('head')[0].appendChild(script);
@@ -318,27 +329,27 @@ window.failCounter.innerHTML=localStorage.failcount;
      }
 
 
-      if(key==21){//Carregar linux - loader
+      if(key==22){//Carregar linux - loader
       msgs.innerHTML="<div>Carregando Linux - Loader Aguarde ... / Loading Linux - Loader Please wait ...</div>";
       LoadedMSG="Linux - Loader Carregado com Sucesso ✔ / Linux - Loader Loaded Successfully ✔";
       var script = document.createElement('script');script.src = "p/pl_linux.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==22){//Carregar GTAV Menu 1.0
+     if(key==23){//Carregar GTAV Menu 1.0
       msgs.innerHTML="<div>Carregando GTAV Menu V1.0 Aguarde ... / GTAV Menu V1.0 - Loader Please wait ...</div>";
       LoadedMSG="GTAV Menu V1.0  Carregado com Sucesso ✔ (Quadrado + Seta Direta Para Ativar) ✔<br>GTAV Menu V1.0 Uploaded Successfully ✔ (Square + Right Arrow To Activate) ✔";
       var script = document.createElement('script');script.src = "p/pl_GTA100.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
 
-     if(key==23){//Carregar GTAV Menu 1.27
+     if(key==24){//Carregar GTAV Menu 1.27
       msgs.innerHTML="<div>Carregando GTAV Menu V1.27 Aguarde ... / GTAV Menu V1.27 - Loader Please wait ...</div>";
       LoadedMSG="GTAV Menu V1.27  Carregado com Sucesso ✔ (Quadrado + Seta Direta Para Ativar) ✔<br>GTAV Menu V1.27 Uploaded Successfully ✔ (Square + Right Arrow To Activate) ✔";
       var script = document.createElement('script');script.src = "p/pl_GTA127.js";document.getElementsByTagName('head')[0].appendChild(script);
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
      }
-     if(key==24){//Carregar GTAV Menu 1.32
+     if(key==25){//Carregar GTAV Menu 1.32
       msgs.innerHTML="<div>Carregando GTAV Menu V1.32 Aguarde ... / GTAV Menu V1.32 - Loader Please wait ...</div>";
       LoadedMSG="GTAV Menu V1.32  Carregado com Sucesso ✔ (Quadrado + Seta Direta Para Ativar) ✔<br>GTAV Menu V1.32 Uploaded Successfully ✔ (Square + Right Arrow To Activate) ✔";
       var script = document.createElement('script');script.src = "p/pl_GTA132.js";document.getElementsByTagName('head')[0].appendChild(script);

@@ -1,6 +1,6 @@
 CACHE MANIFEST 
-# v14.0 
-# 17/09/2020-11:00:57.44 
+# v13.5 
+# 01/11/2020-23:00:57.44 
 
 index.html
 creditos.html
@@ -27,6 +27,7 @@ img/ftp.png
 img/fundo.jpg
 img/hen.png
 img/HenEnable.png
+img/HenVR.png
 img/history.png
 img/icon.gif
 img/icon.png
@@ -67,6 +68,7 @@ p/pl_GTA132.js
 p/pl_HEN2.1.3.js
 p/pl_HEN2.2.5BR.js
 p/pl_HEN3.0.0BR.js
+p/pl_HENVRjs
 p/pl_historyBlockerBR.js
 p/pl_kernelDumperBR.js
 p/pl_linux.js
