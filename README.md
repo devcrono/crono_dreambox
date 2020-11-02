@@ -10,7 +10,7 @@ put our DNS
 
 18.229.246.54
 
-0.0.0.0
+8.8.4.4
 
 clean your browser
 
