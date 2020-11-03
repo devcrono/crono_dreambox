@@ -6,6 +6,7 @@ index.html
 creditos.html
 automatico.html
 manual.html
+
 css/icon.css
 css/iconhome.css
 css/main.css
@@ -25,6 +26,7 @@ img/FanControl.png
 img/favicon.ico
 img/ftp.png
 img/fundo.jpg
+img/gtav.png
 img/hen.png
 img/HenEnable.png
 img/HenVR.png
@@ -42,7 +44,6 @@ img/restore.png
 img/rte.png
 img/SaveGame.png
 img/todex.png
-img/gtav.png
 
 js/materialize.js
 js/vue.js
@@ -68,7 +69,7 @@ p/pl_GTA132.js
 p/pl_HEN2.1.3.js
 p/pl_HEN2.2.5BR.js
 p/pl_HEN3.0.0BR.js
-p/pl_HENVRjs
+p/pl_HENVR.js
 p/pl_historyBlockerBR.js
 p/pl_kernelDumperBR.js
 p/pl_linux.js
