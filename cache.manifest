@@ -1,6 +1,6 @@
 CACHE MANIFEST 
-# v13.5 
-# 01/11/2020-23:00:57.44 
+# v14 
+# 02/02/2021-23:00:57.44 
 
 index.html
 creditos.html
@@ -13,6 +13,7 @@ css/main.css
 css/mainhome.css
 css/materialize.css
 css/materializehome.css
+
 
 img/app2usb.png
 img/avatarDumper.png
@@ -37,6 +38,7 @@ img/indice.png
 img/kdumper.png
 img/keydumper.png
 img/linux.png
+img/Loja.png
 img/ps4debug.png
 img/remote.png
 img/RestaurarGame.png
@@ -69,6 +71,7 @@ p/pl_GTA132.js
 p/pl_HEN2.1.3.js
 p/pl_HEN2.2.5BR.js
 p/pl_HEN3.0.0BR.js
+p/pl_GOLDHEN1.0
 p/pl_HENVR.js
 p/pl_historyBlockerBR.js
 p/pl_kernelDumperBR.js
@@ -81,3 +84,4 @@ p/pl_ToDEX.js
 p/pl_updatesDisableBR.js
 p/pl_updatesEnableBR.js
 p/pl_WebRTE.js
+p/pl_GOLDHEN1.0.js
