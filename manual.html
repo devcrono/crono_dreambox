@@ -1,466 +1,931 @@
 <!DOCTYPE html>
+
 <html manifest="cache.manifest">
+
 <head>
-<title>CRONO_ DREAMBOX PS4 V14 MANUAL</title>
+
+<title>CRONO_ DREAMBOX PS4 V16 MANUAL</title>
+
 <meta charset="UTF-8" />
+
 <link rel="shortcut icon" href="img/favicon.ico" />
+
 <link rel="stylesheet" href="css/icon.css">
+
 <link rel="stylesheet" href="css/materialize.css">
+
 <link rel="stylesheet" href="css/main.css">
+
 </head>
+
 <script>
+
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline AGUARDE! / Installing Offline Cache WAIT!: " + Percent + "%";}
+
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML=" Cache Instalado com Sucesso! / Cache Installed Successfully!";},3000);setTimeout(function(){window.msgs.innerHTML="AGORA! Saia, Desligue a Internet e Abra o Navegador Novamente para executar os EXPLOITS! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  NOW! Exit, Turn off the Internet and Open the Browser Again to run the EXPLOITS!";},5000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+
 </script>
+
 <script>
+
 if (localStorage.passcount == null) localStorage.passcount=0;
+
 window.passCounter.innerHTML=localStorage.passcount;
+
 </script>
+
 <script>
+
 if (localStorage.failcount == null) localStorage.failcount=0;
+
 window.failCounter.innerHTML=localStorage.failcount;
+
 </script>
+
 <body id="body" >
+
 <a href="https://twitter.com/cronocardoso"><img class="icon" src="img/icon.gif"/></a>
+
 <script src="p/cal.js"></script>
+
 <div id="app" ><!-- app start -->
+
 <nav class="transparent" ><!-- navbar start -->
+
 <div class="nav-wrapper">
+
 <span id="date" ></span>
+
 <span id="clock" ></span>
-<a href="javascript:void(0)" class="brand-logo left">CRONO_ DREAMBOX PS4 V14 MANUAL</a>
+
+<a href="javascript:void(0)" class="brand-logo left">CRONO_ DREAMBOX PS4 V16 MANUAL</a>
+
 <a  class="sucessos">SUCESSOS = <span id=passCounter></span></a>
+
 <a  class="falhas">FALHAS = <span id=failCounter></span></a>  
+
 <ul id="nav-mobile" class="right"><!-- navbar links -->   
+
 </ul>
+
 </div>
+
 </nav><!-- navbar end -->
+
   <div class="loader" v-if="isLoaderShow">
+
    <span id="msgs">SELECIONE O EXPLOIT QUE DESEJA ATIVAR! / SELECT THE EXPLOIT YOU WANT TO ACTIVATE!</span>
+
    <span id="temp" >
+
     <input type="range" id="tempC" min="40" @change="temp=tempC.value" value="60" step="1" max="79" />
+
     <span class="tempVal" >{{temp+"&#176;C"}}</span>
+
     <button @click="setTemp()">Selecionar</button></span>
+
   </div>
+
   <div class="payloads" v-show="isPayloadShow"><!-- payloads list start -->
+
    <div v-for="payload,key in payloads" @click="loadPlayload(key)" @mouseover="hover(key)" @mouseleave="hover()" class="tile">
+
     <img :src="'img/'+payload.icon" >
+
     <p class="white-text" >{{payload.name}}</p>
+
    </div>   
+
   </div><!-- payloads list end -->
+
   <div class="detail" v-show="isDetailShow" ><!-- tozihat-->
+
    <span id="detail" ></span>
+
   </div>
+
   </div><!-- app end -->
+
   <!-- js section  -->
+
  <script src="p/manu_exp_common.js"></script>
+
  <script src="js/materialize.js"></script>
+
  <script type="text/javascript">
+
  if(localStorage.getItem("theme")==null){
+
   localStorage.setItem("theme",0)
+
  }
+
  if(localStorage.getItem("lang")==null){
+
   localStorage.setItem("lang","br","eng","esp","fr")
+
  }
+
  </script>
+
  <script src="js/vue.js"></script>
+
  <script type="text/javascript">
+
   var app = new Vue({
+
    el: '#app',
+
    data: {
+
     isLoaderShow:true,
+
     isPayloadShow:true,
+
     isThemesShow:false,
+
     isAboutUsShow:false,
+
     isDetailShow:false,
+
     lang:localStorage.getItem("lang"),
+
     selectedTheme:localStorage.getItem("theme"),
     payloads:[
 
-  {name:"GOLD-HEN V1.0",icon:"HenEnable.png",
+     {name:"GOLD HEN V1.1",icon:"HenEnable.png",
+
      
+
    },
-  {name:"HEN 3.0.0",icon:"HenEnable.png",
+
+      {name:"GOLD HEN V1.0",icon:"HenEnable.png",
+
      
+
    },
+
+     {name:"HEN 3.0.0",icon:"HenEnable.png",
+
+     
+
+   },
+
  
+
    {name:"HEN 2.2.5",icon:"HenEnable.png",
+
    },
+
+
 
    {name:"HEN 2.1.3 + VR",icon:"HenVR.png",
+
    },
+
+
 
    {name:"HEN 2.1.3",icon:"HenEnable.png",
+
    },
+
+
 
      {name:"MIRA",icon:"hen.png",
+
    },
+
+
 
      {name:"MIRA SEM HB",icon:"hen.png",
+
    },
+
+
 
      {name:"BIN LOADER",icon:"binloader.png",
+
    },
+
+
 
      {name:"FTP",icon:"ftp.png",
+
    },
+
+
 
      {name:"APP - TO - USB",icon:"app2usb.png",
+
    },
+
+
 
      {name:"CONTROLE DE FAN",icon:"FanControl.png",
+
    },
+
+
 
     {name:"DESABILITAR UPDATES",icon:"disableupdate.png",
+
    },
+
+
 
      {name:"HABILITAR UPDATES",icon:"enableupdate.png",
+
    },
+
+
 
      {name:"WEB - RTE ",icon:"rte.png",
+
    },
+
+
 
      {name:"AVATAR DUMPER ",icon:"avatarDumper.png",
+
    },
+
+
 
      {name:"PS4 DEBUG",icon:"ps4debug.png",
+
    },
+
+
 
    {name:"BLOQUEAR HISTORICO",icon:"history.png",
+
  },
+
+
 
    {name:"TO - DEX",icon:"todex.png",
+
  },
 
+
+
      {name:"BACKUP BD PS4",icon:"backup.png",
+
    },
 
+
+
      {name:"RESTAURAR BD PS4",icon:"restore.png",
+
    },
+
+
+
 
 
      {name:"DUMPER - JOGOS V1.8",icon:"dumper.png",
+
    },
+
+
 
      {name:"DUMPER - JOGOS V1.4",icon:"dumper.png", 
+
    },
+
+
 
    {name:"DUMPER - KERNEL",icon:"kdumper.png",
+
  },
+
+
 
    {name:"LINUX - LOADER",icon:"linux.png",
+
  },
+
+
 
   {name:"GTAV MENU V1.0",icon:"gtav.png",
+
  },
+
+
 
   {name:"GTAV MENU V1.27",icon:"gtav.png",
+
  },
+
+
 
   {name:"GTAV MENU V1.32",icon:"gtav.png",
+
  },
 
+
+
 ],
+
     themes:[
+
      {url:"fundo.jpg",selected:false},   
+
     ],
+
     temp:tempC.value
+
    },
+
    methods:{
+
     loadPlayload: function(key){
 
-          if(key==0){//Carregar Jailbreak + GOLD-HEN V1.0 para 6.72
-      msgs.innerHTML="<div>Carregando Jailbreak + GOLD-HEN V1.0 Aguarde ... / Loading Jailbreak + GOLD-HEN V1.0 Please wait ...</div>";
-      LoadedMSG="Jailbreak + GOLD-HEN V1.0 Carregado com Sucesso ✔ / Jailbreak + GOLD-HEN V1.0 Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/p/pl_GOLDHEN1.0.js";
-      setTimeout(jailbreak,500);
-      var script = document.createElement('script');script.src = "p/p/pl_GOLDHEN1.0.js";document.getElementsByTagName('head')[0].appendChild(script);
+
+       if(key==0){//Carregar Jailbreak + GOLD HEN V1.1 para 6.72
+
+      msgs.innerHTML="<div>Carregando Jailbreak + GOLD HEN V1.1 Aguarde ... / Loading Jailbreak + GOLD HEN V1.1 Please wait ...</div>";
+
+      LoadedMSG="Jailbreak + GOLD HEN V1.0 Carregado com Sucesso ✔ / JJailbreak + GOLD HEN V1.1 Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_GOLDHEN1.1.js";
+
+      var script = document.createElement('script');script.src = "p/pl_GOLDHEN1.1.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
-    
-      if(key==1){//Carregar Jailbreak + HEN 3.0.0 para 6.72
+
+
+      if(key==1){//Carregar Jailbreak + GOLD HEN V1.0 para 6.72
+
+      msgs.innerHTML="<div>Carregando Jailbreak + GOLD HEN V1.0 Aguarde ... / Loading Jailbreak + GOLD HEN V1.0 Please wait ...</div>";
+
+      LoadedMSG="Jailbreak + GOLD HEN V1.0 Carregado com Sucesso ✔ / JJailbreak + GOLD HEN V1.0 Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_GOLDHEN1.0.js";
+
+      var script = document.createElement('script');script.src = "p/pl_GOLDHEN1.0.js";document.getElementsByTagName('head')[0].appendChild(script);
+
+      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
+     }
+
+
+     if(key==2){//Carregar Jailbreak + HEN 3.0.0 para 6.72
+
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 3.0.0 Aguarde ... / Loading Jailbreak + HEN 3.0.0 Please wait ...</div>";
+
       LoadedMSG="Jailbreak + HEN 3.0.0 Carregado com Sucesso ✔ / Jailbreak + HEN 3.0.0 Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_HEN3.0.0BR.js";
-      setTimeout(jailbreak,500);
+
       var script = document.createElement('script');script.src = "p/pl_HEN3.0.0BR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
-     
-     if(key==2){//Carregar Jailbreak + HEN 2.2.5 para 6.72
+
+
+
+     if(key==3){//Carregar Jailbreak + HEN 2.2.5 para 6.72
+
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.2.5 Aguarde ... / Loading Jailbreak + HEN 2.2.5 Please wait ...</div>";
+
       LoadedMSG="Jailbreak + HEN 2.2.5 Carregado com Sucesso ✔ / Jailbreak + HEN 2.2.5 Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_HEN2.2.5BR.js";
-      setTimeout(jailbreak,500);
+
       var script = document.createElement('script');script.src = "p/pl_HEN2.2.5BR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==3){//Carregar Jailbreak + HEN 2.1.3 + VR para 6.72
+
+
+     if(key==4){//Carregar Jailbreak + HEN 2.1.3 + VR para 6.72
+
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.3 + VR Aguarde ... / Loading Jailbreak + HEN 2.1.3 + VR Please wait ...</div>";
-      LoadedMSG="Jailbreak + HEN 2.1.3 + VR Carregado com Sucesso ✔ / Jailbreak + HEN 2.1.3 + VR Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_HENVR.js";
-      setTimeout(jailbreak,500);
-      var script = document.createElement('script');script.src = "p/pl_HENVR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
+      LoadedMSG="Jailbreak + HEN 2.1.3 + VR Carregado com Sucesso ✔ / Jailbreak + HEN 2.1.3 + VR Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_HENVR.js"
+
+      var script = document.createElement('script');script.src = "p/p/pl_HENVR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==4){//Carregar Jailbreak + HEN 2.1.3 para 6.72
+
+
+      if(key==5){//Carregar Jailbreak + hen 2.1.3 para 6.72
+
       msgs.innerHTML="<div>Carregando Jailbreak + HEN 2.1.3 Aguarde ... / Loading Jailbreak + HEN 2.1.3 Please wait ...</div>";
+
       LoadedMSG="Jailbreak + HEN 2.1.3 Carregado com Sucesso ✔ / Jailbreak + HEN 2.1.3 Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_HEN2.1.3.js";
-      setTimeout(jailbreak,500);
+
       var script = document.createElement('script');script.src = "p/pl_HEN2.1.3.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
- 
-      if(key==5){//Carregar Mira
+
+
+
+      if(key==6){//Carregar Mira
+
       msgs.innerHTML="<div>Carregando Jailbreak + MIRA Aguarde ... / Loading Jailbreak + MIRA Please wait ...</div>";
+
       LoadedMSG="Jailbreak + MIRA Carregado com Sucesso ✔ / Jailbreak + MIRA Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_mira.js";
-      setTimeout(jailbreak,500);
+
        var script = document.createElement('script');script.src = "p/pl_mira.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==6){//Carregar Jailbreak + Mira Sem HB
+
+
+      if(key==7){//Carregar Jailbreak + Mira Sem HB
+
       msgs.innerHTML="<div>Carregando jailbreak + Mira sem HB Aguarde ... / Loading jailbreak + Mira without HB Please wait ...</div>";
+
       LoadedMSG="Jailbreak + Mira sem HB Carregado com Sucesso ✔ / Jailbreak + Mira without HB Successfully Loaded ✔";ExploitMira="yes";MiraSRC="p/pl_miranohb.js";
-      setTimeout(jailbreak,500);
+
        var script = document.createElement('script');script.src = "p/pl_miranohb.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
-      if(key==7){//Carregar bin - loader
+
+
+
+      if(key==8){//Carregar bin - loader
+
       msgs.innerHTML="<div>Carregando BIN LOADER Aguarde ... / Loading BIN LOADER Please wait ...</div>";
+
       LoadedMSG="Carregado! Agora Envie o Payload desejado para a porta 9021 <br> Loaded! Now Send the desired Payload to port 9021";
+
       var script = document.createElement('script');script.src = "p/exp_BinLoader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==8){//Carregar ftp
+
+
+      if(key==9){//Carregar ftp
+
       msgs.innerHTML="<div>Carregando FTP Aguarde ... / Loading FTP Please wait ...</div>";
+
       LoadedMSG="FTP Carregado com Sucesso ✔ / FTP Uploaded Successfully ✔";
+
       var script = document.createElement('script');script.src = "p/pl_ftp.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==9){//Carregar app - to - usb
+
+
+      if(key==10){//Carregar app - to - usb
+
       msgs.innerHTML="<div>Carregando APP - TO - USB Aguarde ... / Loading APP - TO - USB Please wait ...</div>";
+
       LoadedMSG="APP - TO - USB Carregado com Sucesso ✔ / APP - TO - USB Successfully Loaded ✔";
+
       var script = document.createElement('script');script.src = "p/pl_app2usbBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==10){//Carregar FAN
+
+
+      if(key==11){//Carregar FAN
+
       msgs.innerHTML="<div>Carregando Controle de Ventoinha (FAN) Aguarde ...  / Loading Fan Control (FAN) Please wait ...</div>";
+
       setTimeout(function(){
+
        msgs.style.display="none";
+
        temp.style.display="inline";
+
       },1000);
+
      }
 
-      if(key==11){//Carregar updates disable
+
+
+      if(key==12){//Carregar updates disable
+
       msgs.innerHTML="<div>Carregando Desabilitar Updates Aguarde ... / Loading Disable Updates Please wait ...</div>";
+
       LoadedMSG="Updates Desabilitados com Sucesso ✔ / Updates Disabled Successfully ✔";
+
       var script = document.createElement('script');script.src = "p/pl_updatesDisableBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==12){//Carregar updates enable
+
+
+      if(key==13){//Carregar updates enable
+
       msgs.innerHTML="<div>Carregando Habilitar Updates Aguarde ... / Loading Enable Updates Please wait ...</div>";
+
       LoadedMSG="Updates Habilitados com Sucesso ✔ / Updates Enabled Successfully ✔";
+
       var script = document.createElement('script');script.src = "p/pl_updatesEnableBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
 
-      if(key==13){//Carregar web - rte
+
+
+
+      if(key==14){//Carregar web - rte
+
       msgs.innerHTML="<div>Carregando WEB - RTE 6.72 CHEATS Aguarde... / Loading WEB - RTE 6.72 CHEATS Please wait ...</div>";
+
       LoadedMSG="WEB - RTE 6.72 CHEATS Carregado com Sucesso ✔ / WEB - RTE 6.72 CHEATS Successfully Loaded ✔ ";
+
       var script = document.createElement('script');script.src = "p/pl_WebRTE.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-     if(key==14){//Carregar Avatar Dumper
+
+
+     if(key==15){//Carregar Avatar Dumper
+
       msgs.innerHTML="<div>Carregando Dumper de Avatar ... / Loading Avatar Dumper ...</div>";
+
       LoadedMSG="Injetor do Avatar Dumper Carregado com Sucesso ✔ / Avatar Dumper Injector Successfully Loaded ✔";
+
       var script = document.createElement('script');script.src = "p/AvatarDumperBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==15){//PS4 Debug
+
+
+      if(key==16){//PS4 Debug
+
       msgs.innerHTML="<div>Carregando PS4 Debug Aguarde ... / Loading PS4 Debug Please wait ...</div>";
+
       LoadedMSG=" PS4 Debug Carregado com Sucesso ✔ / PS4 Debug Successfully Loaded ✔";
+
       var script = document.createElement('script');script.src = "p/pl_ps4debug.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==16){//Carregar history block
+
+
+      if(key==7){//Carregar history block
+
       msgs.innerHTML="<div>Carregando Bloquedor de Historico Aguarde ... / Loading History Blocker Please wait ...</div>";
+
       LoadedMSG="Bloquedor de Historico Carregado com Sucesso ✔ / History Blocker Loaded Successfully ✔";
+
       var script = document.createElement('script');script.src = "p/pl_historyBlockerBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==17) {// Carregar TO - DEX
+
+
+      if(key==18) {// Carregar TO - DEX
+
        msgs.innerHTML = "<div> Carregando modo TO - DEX Aguarde ...  / Loading TO - DEX mode Please wait ...</div>";
+
        LoadedMSG = " Modo TO - DEX Carregado com Sucesso ✔ / TO - DEX Mode Loaded Successfully ✔";
+
        var script = document.createElement ('script'); script.src = "p/pl_ToDEX.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
+
        var script = document.createElement ('script'); script.src = "p/exp_loader.js"; document.getElementsByTagName ('head') [0] .appendChild (script);
+
      }
 
-      if(key==18){//Carregar db Backup
+
+
+      if(key==19){//Carregar db Backup
+
       msgs.innerHTML="<div>Carregando Backup do BD do PS4 Aguarde ... / Loading PS4 BD Backup Please wait ...</div>";
+
       LoadedMSG="Backup do BD Carregado com Sucesso ✔ / BD Backup Loaded Successfully ✔";
+
       var script = document.createElement('script');script.src = "p/pl_dbBackupBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==19){//Carregar db Restore
+
+
+      if(key==20){//Carregar db Restore
+
       msgs.innerHTML="<div>Carregado Restaurador de BD do PS4 Aguarde ... / Loaded PS4 BD Restorer Please wait ...</div>";
+
       LoadedMSG="Restauração do BD Carregado com Sucesso ✔ / BD Restore Loaded Successfully ✔";
+
       var script = document.createElement('script');script.src = "p/pl_dbRestoreBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      } 
 
-      if(key==20){//Carregar dumper pt-br
+
+
+      if(key==21){//Carregar dumper pt-br
+
       msgs.innerHTML="<div>Carregando Dumper V1.8 Aguarde ... / Loading Dumper V1.8 Please wait ...</div>";
+
       LoadedMSG="Dumper V1.8 Carregado com Sucesso ✔ / Dumper V1.8 Successfully Loaded ✔";
+
       var script = document.createElement('script');script.src = "p/pl_dumperv1.8BR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==21){//Carregar dumper
+
+
+      if(key==22){//Carregar dumper
+
       msgs.innerHTML="<div>Carregando Dumper V1.4 Aguarde ... / Loading Dumper V1.4 Please wait ...</div>";
+
       LoadedMSG="Dumper V1.4 Carregado com Sucesso ✔ / Dumper V1.4 Successfully Loaded ✔";
+
       var script = document.createElement('script');script.src = "p/pl_dumperv1.4BR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-      if(key==22){//Carregar kernel dump
+
+
+      if(key==23){//Carregar kernel dump
+
       msgs.innerHTML="<div>Carregando Dumper de  Kernel Aguarde ... / Loading Kernel Dumper Please wait ...</div>";
+
       LoadedMSG="Dumper de  Kernel Carregado com Sucesso ✔ / Successfully Loaded Kernel Dumper ✔";
+
       var script = document.createElement('script');script.src = "p/pl_kernelDumperBR.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
 
-      if(key==23){//Carregar linux - loader
+
+
+
+      if(key==24){//Carregar linux - loader
+
       msgs.innerHTML="<div>Carregando Linux - Loader Aguarde ... / Loading Linux - Loader Please wait ...</div>";
+
       LoadedMSG="Linux - Loader Carregado com Sucesso ✔ / Linux - Loader Loaded Successfully ✔";
+
       var script = document.createElement('script');script.src = "p/pl_linux.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-     if(key==24){//Carregar GTAV Menu 1.0
+
+
+     if(key==25){//Carregar GTAV Menu 1.0
+
       msgs.innerHTML="<div>Carregando GTAV Menu V1.0 Aguarde ... / GTAV Menu V1.0 - Loader Please wait ...</div>";
+
       LoadedMSG="GTAV Menu V1.0  Carregado com Sucesso ✔ (Quadrado + Seta Direta Para Ativar) ✔<br>GTAV Menu V1.0 Uploaded Successfully ✔ (Square + Right Arrow To Activate) ✔";
+
       var script = document.createElement('script');script.src = "p/pl_GTA100.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
 
-     if(key==25){//Carregar GTAV Menu 1.27
+
+
+     if(key==26){//Carregar GTAV Menu 1.27
+
       msgs.innerHTML="<div>Carregando GTAV Menu V1.27 Aguarde ... / GTAV Menu V1.27 - Loader Please wait ...</div>";
+
       LoadedMSG="GTAV Menu V1.27  Carregado com Sucesso ✔ (Quadrado + Seta Direta Para Ativar) ✔<br>GTAV Menu V1.27 Uploaded Successfully ✔ (Square + Right Arrow To Activate) ✔";
+
       var script = document.createElement('script');script.src = "p/pl_GTA127.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
-     if(key==26){//Carregar GTAV Menu 1.32
+
+     if(key==27){//Carregar GTAV Menu 1.32
+
       msgs.innerHTML="<div>Carregando GTAV Menu V1.32 Aguarde ... / GTAV Menu V1.32 - Loader Please wait ...</div>";
+
       LoadedMSG="GTAV Menu V1.32  Carregado com Sucesso ✔ (Quadrado + Seta Direta Para Ativar) ✔<br>GTAV Menu V1.32 Uploaded Successfully ✔ (Square + Right Arrow To Activate) ✔";
+
       var script = document.createElement('script');script.src = "p/pl_GTA132.js";document.getElementsByTagName('head')[0].appendChild(script);
+
       var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      }
+
 
 
     },
+
+
 
     showMain:function(){
+
      this.isPayloadShow = true
+
      this.isThemesShow = false
+
      this.isAboutUsShow = false
+
      this.isLoaderShow = true 
+
     },
+
     showTheme:function(){
+
      this.isLoaderShow = false
+
      this.isAboutUsShow = false
+
      this.isThemesShow = true
+
      this.isPayloadShow = false
+
     },
+
     showAboutUs:function(){
+
      this.isPayloadShow=false
+
      this.isAboutUsShow = true
+
      this.isLoaderShow = false
+
      this.isThemesShow = false
+
     },
+
     showDonation:function(){
+
      this.isPayloadShow=false
+
      this.isAboutUsShow = false
+
      this.isLoaderShow = false
+
      this.isThemesShow = false 
+
     },
+
     changeTheme:function(key){
+
      this.themes[this.selectedTheme].selected=false
+
      localStorage.setItem("theme",(key))
+
      this.selectedTheme=localStorage.getItem("theme")
+
      this.themes[this.selectedTheme].selected=true
+
      document.getElementById("body").style.background="url(img/"+this.themes[localStorage.getItem("theme")].url+")";
+
      document.getElementById("body").style.backgroundRepeat="no-repeat";
+
      document.getElementById("body").style.backgroundSize="100%";
+
     },
+
     changeLang:function(lang){
+
      localStorage.setItem("lang",lang)
+
      this.lang=localStorage.getItem("lang")
+
     },
+
     changeText:function(tbr,teng,tesp,tfr){
+
      if(this.lang=="br"){
+
       return tbr;
+
      }
+
      if(this.lang=="eng"){
+
       return teng;
+
      }
+
      if(this.lang=="esp"){
+
       return tesp;
 
+
+
      }if(this.lang=="fr"){
+
       return tfr;
+
      }
+
      return "error to change lang";
+
     },
+
     hover:function(key){
+
      if(key !== undefined){
+
       this.isDetailShow = false
+
       if(this.lang=="br"){
+
        document.getElementById("detail").innerHTML=this.payloads[key].br_detail
+
       }
+
       if(this.lang=="eng"){
+
        document.getElementById("detail").innerHTML=this.payloads[key].eng_detail
+
       }
+
       if(this.lang=="esp"){
+
        document.getElementById("detail").innerHTML=this.payloads[key].esp_detail
+
       }
+
       if(this.lang=="fr"){
+
        document.getElementById("detail").innerHTML=this.payloads[key].fr_detail
+
       }
+
      }else{
+
       this.isDetailShow = false
+
      }
+
     },
+
     setTemp:function(){
+
      msgs.style.display="inline"
+
      temp.style.display="none"
+
      LoadedMSG="Controle de Ventoinha (FAN) Carregado com Sucesso ✔ / Fan Control (FAN) Loaded Successfully ✔";fanTemp=tempC.value;
+
      var script = document.createElement('script');script.src = "p/pl_fanthresh.js";document.getElementsByTagName('head')[0].appendChild(script);
+
      var script = document.createElement('script');script.src = "p/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+
     },
+
     retLang:function(){
+
      return this.lang;
+
     }
+
    }, 
+
    created(){
+
     this.themes[this.selectedTheme].selected=true
+
     fetch('counter.php')
+
    },
+
   })
+
  </script>
+
  <script type="text/javascript">
+
   document.getElementById("body").style.background="url(img/"+app.themes[localStorage.getItem("theme")].url+")";
+
   document.getElementById("body").style.backgroundRepeat="no-repeat";
+
   document.getElementById("body").style.backgroundSize="100%";
+
  </script>
+
  
+
 </body>
+
 </html>
